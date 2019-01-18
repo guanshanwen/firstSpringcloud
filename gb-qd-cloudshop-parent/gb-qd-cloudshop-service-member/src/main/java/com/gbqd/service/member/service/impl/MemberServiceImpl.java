@@ -1,5 +1,6 @@
 package com.gbqd.service.member.service.impl;
 
+import com.gbqd.common.utils.RedisUtil;
 import com.gbqd.mapper.CsMemberMapper;
 import com.gbqd.pojo.CsMember;
 import com.gbqd.service.member.MemberService;
@@ -18,7 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class MemberServiceImpl implements MemberService {
     @Autowired
     CsMemberMapper csMemberMapper;
-
+    @Autowired
+    RedisUtil redisUtil;
     @Value("${server.port}")
     String port;  //在application.yml文件里赋的值
     private static final Logger logger = LoggerFactory.getLogger(MemberServiceImpl.class);
@@ -72,6 +74,8 @@ public class MemberServiceImpl implements MemberService {
      */
     @Override
     public String gerMember(@RequestParam(value = "name", required = false) String name, @RequestParam(value = "age", required = false) String age) {
+       redisUtil.set("name","郑国强");
+        redisUtil.expire("name",20);
         String msg = "通过member接口 获得name:" + name + "    和 age" + age + "  参数        接口:" + port;
         return msg;
 

@@ -1,5 +1,6 @@
 package com.gbqd.service.member.controller;
 
+import com.gbqd.common.utils.RedisUtil;
 import com.gbqd.pojo.CsMember;
 import com.gbqd.service.member.MemberService;
 import io.swagger.annotations.Api;
@@ -23,7 +24,8 @@ import springfox.documentation.annotations.ApiIgnore;
 public class MemberController {
     @Autowired
     MemberService memberService;
-
+    @Autowired
+    RedisUtil redisUtil;
     @ApiOperation(value = "查询用户信息", notes = "需要传递一个id参数来查询用户的详细信息")
     @ApiImplicitParam(name = "id", value = "每个 id 对应一次用户登录", required = true, dataType = "int")
     @RequestMapping(value = "/getfind", produces = MediaType.APPLICATION_JSON_VALUE,method = RequestMethod.GET)
@@ -39,8 +41,8 @@ public class MemberController {
 
 
   /*  *//**
-     * @param PageNum 页数
-     * @param pageSize 每页几条
+//     * @param PageNum 页数
+//     * @param pageSize 每页几条
      * @@describe: 分页例子
      * @author: MrWen
      * @return: com.github.pagehelper.PageInfo<com.gbqd.pojo.CsMember>
@@ -55,7 +57,19 @@ public class MemberController {
     public PageInfo<CsMember> findList(int PageNum, int pageSize){
         return  memberService.findList(PageNum,pageSize);
     }*/
+    @RequestMapping(value = "/getMember")
+    public  String getMember(@RequestParam(value = "name", required = false) String name, @RequestParam(value = "age", required = false) String age){
+       return  memberService.gerMember(name,age);
+    }
+    @RequestMapping(value = "/getRedis")
+    public  Object getMembesr(){
+       Object ob=  redisUtil.get("name");
+       return ob;
+    }
 
+    @RequestMapping(value = "/deleteRedis")
+    public void  deleteRedis(){
+         redisUtil.remove("name");
 
-
+    }
 }

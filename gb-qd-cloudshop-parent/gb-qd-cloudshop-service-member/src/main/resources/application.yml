@@ -5,6 +5,12 @@ spring:
     url: jdbc:mysql://192.168.0.41:3306/gb_cloudshop?serverTimezone=GMT%2B8
     username: root
     password: gbe2019
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    timeout: 0
 mybatis:
   type-aliases-package: com.gbqd.pojo
   mapper-locations: classpath:Mapper/*.xml
@@ -17,6 +23,8 @@ pagehelper:
   reasonable: true
   supportMethodsArguments: true
   params: count=countSql
+
+
 
 
 

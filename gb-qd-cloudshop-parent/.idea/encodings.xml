@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gb-qd-cloudshop-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gb-qd-cloudshop-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gb-qd-cloudshop-pojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gb-qd-cloudshop-service-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-member-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-order-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gb-qd-cloudshop-service-member" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gb-qd-cloudshop-service-order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gb-qd-cloudshop-zuul" charset="UTF-8" />
+  </component>
+</project>

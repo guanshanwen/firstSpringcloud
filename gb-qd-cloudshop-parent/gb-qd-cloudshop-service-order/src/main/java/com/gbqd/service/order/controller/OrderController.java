@@ -44,6 +44,7 @@ public class OrderController {
             @ApiResponse(code = 401, message = "未授权客户机访问数据"),
             @ApiResponse(code = 404, message = "服务器找不到给定的资源；文档不存在"),
             @ApiResponse(code = 500, message = "服务器不能完成请求") })*/
+
     @RequestMapping(value = "/getOrder",method = RequestMethod.GET)
     public String getOrder(@RequestParam(value = "id", required = false) String id, @RequestParam(value = "code", required = false) String code) {
         return orderService.getOrder(id, code);

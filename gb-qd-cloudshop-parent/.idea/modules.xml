@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cloudshop.iml" filepath="$PROJECT_DIR$/cloudshop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gb-qd-cloudshop-common/gb-qd-cloudshop-common.iml" filepath="$PROJECT_DIR$/gb-qd-cloudshop-common/gb-qd-cloudshop-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gb-qd-cloudshop-eureka/gb-qd-cloudshop-eureka.iml" filepath="$PROJECT_DIR$/gb-qd-cloudshop-eureka/gb-qd-cloudshop-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/gb-qd-cloudshop-mapper.iml" filepath="$PROJECT_DIR$/gb-qd-cloudshop-mapper/gb-qd-cloudshop-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-member-api/gb-qd-cloudshop-member-api.iml" filepath="$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-member-api/gb-qd-cloudshop-member-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-order-api/gb-qd-cloudshop-order-api.iml" filepath="$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-order-api/gb-qd-cloudshop-order-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gb-qd-cloudshop-pojo/gb-qd-cloudshop-pojo.iml" filepath="$PROJECT_DIR$/gb-qd-cloudshop-pojo/gb-qd-cloudshop-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-service-api.iml" filepath="$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gb-qd-cloudshop-service-member/gb-qd-cloudshop-service-member.iml" filepath="$PROJECT_DIR$/gb-qd-cloudshop-service-member/gb-qd-cloudshop-service-member.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gb-qd-cloudshop-service-order/gb-qd-cloudshop-service-order.iml" filepath="$PROJECT_DIR$/gb-qd-cloudshop-service-order/gb-qd-cloudshop-service-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gb-qd-cloudshop-zuul/gb-qd-cloudshop-zuul.iml" filepath="$PROJECT_DIR$/gb-qd-cloudshop-zuul/gb-qd-cloudshop-zuul.iml" />
+    </modules>
+  </component>
+</project>

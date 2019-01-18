@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="gb-qd-cloudshop-common" />
+        <module name="gb-qd-cloudshop-eureka" />
+        <module name="gb-qd-cloudshop-mapper" />
+        <module name="gb-qd-cloudshop-member-api" />
+        <module name="gb-qd-cloudshop-order-api" />
+        <module name="gb-qd-cloudshop-pojo" />
+        <module name="gb-qd-cloudshop-service-member" />
+        <module name="gb-qd-cloudshop-service-order" />
+        <module name="gb-qd-cloudshop-zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloudshop" target="1.8" />
+      <module name="gb-qd-cloudshop-common" target="1.8" />
+      <module name="gb-qd-cloudshop-eureka" target="1.8" />
+      <module name="gb-qd-cloudshop-mapper" target="1.8" />
+      <module name="gb-qd-cloudshop-member-api" target="1.8" />
+      <module name="gb-qd-cloudshop-order-api" target="1.8" />
+      <module name="gb-qd-cloudshop-pojo" target="1.8" />
+      <module name="gb-qd-cloudshop-service-api" target="1.8" />
+      <module name="gb-qd-cloudshop-service-member" target="1.8" />
+      <module name="gb-qd-cloudshop-service-order" target="1.8" />
+      <module name="gb-qd-cloudshop-zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gb-qd-cloudshop-common" options="-parameters" />
+      <module name="gb-qd-cloudshop-eureka" options="-parameters" />
+      <module name="gb-qd-cloudshop-mapper" options="-parameters" />
+      <module name="gb-qd-cloudshop-member-api" options="-parameters" />
+      <module name="gb-qd-cloudshop-order-api" options="-parameters" />
+      <module name="gb-qd-cloudshop-pojo" options="-parameters" />
+      <module name="gb-qd-cloudshop-service-member" options="-parameters" />
+      <module name="gb-qd-cloudshop-service-order" options="-parameters" />
+      <module name="gb-qd-cloudshop-zuul" options="-parameters" />
+    </option>
+  </component>
+</project>
