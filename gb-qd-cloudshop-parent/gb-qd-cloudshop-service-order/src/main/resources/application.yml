@@ -1,0 +1,19 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.0.41:3306/gb_cloudshop?serverTimezone=GMT%2B8
+    username: root
+    password: gbe2019
+mybatis:
+  type-aliases-package: cn.gbqd.pojo
+  mapper-locations: classpath:Mapper/*.xml
+# swagger2
+swagger2.package: com.gbqd.service.order.controller
+
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
