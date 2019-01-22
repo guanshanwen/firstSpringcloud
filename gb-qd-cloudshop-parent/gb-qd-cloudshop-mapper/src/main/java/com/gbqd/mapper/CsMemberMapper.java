@@ -2,7 +2,6 @@ package com.gbqd.mapper;
 
 import com.gbqd.pojo.CsMember;
 
-
 public interface CsMemberMapper {
     int deleteByPrimaryKey(Integer id);
 

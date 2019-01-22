@@ -36,8 +36,8 @@ public class OrderController {
      */
     @ApiOperation(value = "订单信息", notes = "需要传递一个id参数来查询订单的详细信息")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "id", value = "每个 id 对应一个订单", required = true, dataType = "String"),
-            @ApiImplicitParam(name = "code", value = "每个订单有一个code订单号", required = true, dataType = "String")
+            @ApiImplicitParam(name = "id", value = "每个 id 对应一个订单", required = true, dataType = "String",paramType="query"),
+            @ApiImplicitParam(name = "code", value = "每个订单有一个code订单号", required = true, dataType = "String",paramType="query")
     })
     /*@ApiResponses({ @ApiResponse(code = 200, message = "Successful — 请求已完成"),
             @ApiResponse(code = 400, message = "请求中有语法问题，或不能满足请求"),

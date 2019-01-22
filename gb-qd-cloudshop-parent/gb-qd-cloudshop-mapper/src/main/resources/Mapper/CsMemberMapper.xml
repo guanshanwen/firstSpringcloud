@@ -4,7 +4,7 @@
   <resultMap id="BaseResultMap" type="com.gbqd.pojo.CsMember">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="member_id" jdbcType="VARCHAR" property="memberId" />
-    <result column="sys_status" jdbcType="TIMESTAMP" property="sysStatus" />
+    <result column="sys_status" jdbcType="TINYINT" property="sysStatus" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="log_time" jdbcType="TIMESTAMP" property="logTime" />
     <result column="log_out_time" jdbcType="TIMESTAMP" property="logOutTime" />
@@ -13,13 +13,13 @@
   <sql id="Base_Column_List">
     id, member_id, sys_status, create_time, log_time, log_out_time, is_auth
   </sql>
- <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from cs_member
     where id = #{id,jdbcType=INTEGER}
   </select>
- <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from cs_member
     where id = #{id,jdbcType=INTEGER}
   </delete>
@@ -27,7 +27,7 @@
     insert into cs_member (id, member_id, sys_status, 
       create_time, log_time, log_out_time, 
       is_auth)
-    values (#{id,jdbcType=INTEGER}, #{memberId,jdbcType=VARCHAR}, #{sysStatus,jdbcType=TIMESTAMP}, 
+    values (#{id,jdbcType=INTEGER}, #{memberId,jdbcType=VARCHAR}, #{sysStatus,jdbcType=TINYINT}, 
       #{createTime,jdbcType=TIMESTAMP}, #{logTime,jdbcType=TIMESTAMP}, #{logOutTime,jdbcType=TIMESTAMP}, 
       #{isAuth,jdbcType=TINYINT})
   </insert>
@@ -64,7 +64,7 @@
         #{memberId,jdbcType=VARCHAR},
       </if>
       <if test="sysStatus != null">
-        #{sysStatus,jdbcType=TIMESTAMP},
+        #{sysStatus,jdbcType=TINYINT},
       </if>
       <if test="createTime != null">
         #{createTime,jdbcType=TIMESTAMP},
@@ -87,7 +87,7 @@
         member_id = #{memberId,jdbcType=VARCHAR},
       </if>
       <if test="sysStatus != null">
-        sys_status = #{sysStatus,jdbcType=TIMESTAMP},
+        sys_status = #{sysStatus,jdbcType=TINYINT},
       </if>
       <if test="createTime != null">
         create_time = #{createTime,jdbcType=TIMESTAMP},
@@ -107,7 +107,7 @@
   <update id="updateByPrimaryKey" parameterType="com.gbqd.pojo.CsMember">
     update cs_member
     set member_id = #{memberId,jdbcType=VARCHAR},
-      sys_status = #{sysStatus,jdbcType=TIMESTAMP},
+      sys_status = #{sysStatus,jdbcType=TINYINT},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       log_time = #{logTime,jdbcType=TIMESTAMP},
       log_out_time = #{logOutTime,jdbcType=TIMESTAMP},

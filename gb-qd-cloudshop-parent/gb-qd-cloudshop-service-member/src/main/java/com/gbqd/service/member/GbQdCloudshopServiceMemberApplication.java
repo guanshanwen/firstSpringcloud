@@ -12,8 +12,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableHystrix
 @EnableCircuitBreaker
 @EnableDiscoveryClient
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.gbqd")
 @MapperScan(basePackages = "com.gbqd.mapper")
+
 public class GbQdCloudshopServiceMemberApplication {
 
     public static void main(String[] args) {

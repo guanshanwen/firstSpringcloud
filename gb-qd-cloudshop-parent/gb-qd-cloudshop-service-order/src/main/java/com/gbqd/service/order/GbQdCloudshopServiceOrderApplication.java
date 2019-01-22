@@ -1,5 +1,6 @@
 package com.gbqd.service.order;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
@@ -11,7 +12,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableHystrix
 @EnableCircuitBreaker
 @EnableDiscoveryClient
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.gbqd")
+@MapperScan(basePackages = "com.gbqd.mapper")
 public class GbQdCloudshopServiceOrderApplication {
 
     public static void main(String[] args) {

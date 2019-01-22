@@ -12,13 +12,18 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>gb-qd-cloudshop-service-order</name>
     <description>Demo project for Spring Boot</description>
-
+    <packaging>jar</packaging>
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Greenwich.RC2</spring-cloud.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.gbqd.common</groupId>
+            <artifactId>gb-qd-cloudshop-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>com.gbqd.pojo</groupId>
             <artifactId>gb-qd-cloudshop-pojo</artifactId>
@@ -27,11 +32,6 @@
         <dependency>
             <groupId>com.gbqd.mapper</groupId>
             <artifactId>gb-qd-cloudshop-mapper</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.gbqd.common</groupId>
-            <artifactId>gb-qd-cloudshop-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -81,6 +81,17 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!--配置为执行-->
+                    <classifier>exec</classifier>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中-->
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

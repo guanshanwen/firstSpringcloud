@@ -16,7 +16,8 @@ import java.util.List;
 @Primary
 public class DocumentationConfig implements SwaggerResourcesProvider {
 
-    @Override public List<SwaggerResource> get() {
+    @Override
+    public List<SwaggerResource> get() {
         List resources = new ArrayList<>();
         resources.add(swaggerResource("订单系统", "/myServerOrder/v2/api-docs", "2.0"));
         resources.add(swaggerResource("用户系统", "/myServerMember/v2/api-docs", "2.0"));
@@ -26,7 +27,8 @@ public class DocumentationConfig implements SwaggerResourcesProvider {
 
     private SwaggerResource swaggerResource(String name, String location, String version) {
         SwaggerResource swaggerResource = new SwaggerResource();
-        swaggerResource.setName(name); swaggerResource.setLocation(location);
+        swaggerResource.setName(name);
+        swaggerResource.setLocation(location);
         swaggerResource.setSwaggerVersion(version);
         return swaggerResource;
     }

@@ -27,7 +27,7 @@ public class MemberController {
     @Autowired
     RedisUtil redisUtil;
     @ApiOperation(value = "查询用户信息", notes = "需要传递一个id参数来查询用户的详细信息")
-    @ApiImplicitParam(name = "id", value = "每个 id 对应一次用户登录", required = true, dataType = "int")
+    @ApiImplicitParam(name = "id", value = "每个 id 对应一次用户登录", required = true, dataType = "int",paramType="query")
     @RequestMapping(value = "/getfind", produces = MediaType.APPLICATION_JSON_VALUE,method = RequestMethod.GET)
     public CsMember getMember(@RequestParam(value = "id") int id) {
         return memberService.find(id);
@@ -57,16 +57,18 @@ public class MemberController {
     public PageInfo<CsMember> findList(int PageNum, int pageSize){
         return  memberService.findList(PageNum,pageSize);
     }*/
+    @ApiIgnore
     @RequestMapping(value = "/getMember")
     public  String getMember(@RequestParam(value = "name", required = false) String name, @RequestParam(value = "age", required = false) String age){
        return  memberService.gerMember(name,age);
     }
+    @ApiIgnore
     @RequestMapping(value = "/getRedis")
     public  Object getMembesr(){
        Object ob=  redisUtil.get("name");
        return ob;
     }
-
+    @ApiIgnore
     @RequestMapping(value = "/deleteRedis")
     public void  deleteRedis(){
          redisUtil.remove("name");
