@@ -1,0 +1,32 @@
+server:
+  port: 8099
+spring:
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/templates/
+  cloud:
+    client:
+      ipAddress: 127.0.0.1
+  application:
+    name: service-front
+eureka:
+  instance:
+    prefer-id: ${spring.cloud.client.ipAddress}:${server.port}
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+#    status-page-url: http://localhost:13000/eureka//swagger-ui.html
+feign:
+  hystrix:
+    enabled: true
+#  httpclient:
+#    enabled: true
+
+#imageUrl: "D:"
+imageUrl: "/usr"
+#存放企业认证图片，店铺logo还有用户身份证的文件夹
+enterpriseImage: "/upload/enterpriseImage/"
+#存放店铺相册的文件夹
+storeImage: "/upload/storeImage/"
+webIp: 192.168.0.57

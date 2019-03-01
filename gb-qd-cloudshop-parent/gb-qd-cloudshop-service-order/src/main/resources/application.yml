@@ -2,12 +2,13 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.0.41:3306/gb_cloudshop?serverTimezone=GMT%2B8
+    url: jdbc:mysql://47.104.18.243:3306/gb_cloudshop?serverTimezone=GMT%2B8
     username: root
-    password: gbe2019
+    password: 123456
+#    password: gbe2019
   redis:
       database: 0
-      host:  127.0.0.1
+      host:  47.104.18.243
       port: 6379
       password: 123456
       timeout: 0
@@ -23,3 +24,7 @@ pagehelper:
   reasonable: true
   supportMethodsArguments: true
   params: count=countSql
+# 打印sql
+logging:
+  level:
+    com.gbqd.mapper: debug

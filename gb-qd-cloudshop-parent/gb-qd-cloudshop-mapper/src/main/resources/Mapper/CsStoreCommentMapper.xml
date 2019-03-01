@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gbqd.mapper.CsStoreCommentMapper">
+    <resultMap id="BaseResultMap" type="com.gbqd.pojo.order.CsStoreComment">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="store_id" jdbcType="BIGINT" property="storeId"/>
+        <result column="member_id" jdbcType="VARCHAR" property="memberId"/>
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+        <result column="health_score" jdbcType="DOUBLE" property="healthScore"/>
+        <result column="environment_score" jdbcType="DOUBLE" property="environmentScore"/>
+        <result column="service_score" jdbcType="DOUBLE" property="serviceScore"/>
+        <result column="click_praise" jdbcType="INTEGER" property="clickPraise"/>
+        <result column="order_id" jdbcType="BIGINT" property="orderId"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="good_or_bad" jdbcType="INTEGER" property="goodOrBad"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, store_id, member_id, content, health_score, environment_score, service_score, 
+    click_praise, order_id, create_time,good_or_bad
+  </sql>
+    <select id="getCommentList"  resultMap="BaseResultMap">
+        select id, store_id, member_id, content, health_score, environment_score, service_score,
+        click_praise, order_id, create_time,good_or_bad, cast((health_score+environment_score+service_score)/3 as
+        decimal(18,1)) as score from cs_store_comment
+       where store_id = #{storeId,jdbcType=BIGINT}
+        <if test="goodOrBad !=null and goodOrBad !=''">
+            AND good_or_bad=#{goodOrBad,jdbcType=INTEGER}
+        </if>
+        order by create_time desc
+    </select>
+
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from cs_store_comment
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from cs_store_comment
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+    <insert id="insert" parameterType="com.gbqd.pojo.order.CsStoreComment">
+    insert into cs_store_comment (id, store_id, member_id, 
+      content, health_score, environment_score, 
+      service_score, click_praise, order_id, 
+      create_time,good_or_bad)
+    values (#{id,jdbcType=BIGINT}, #{storeId,jdbcType=BIGINT}, #{memberId,jdbcType=VARCHAR}, 
+      #{content,jdbcType=VARCHAR}, #{healthScore,jdbcType=DOUBLE}, #{environmentScore,jdbcType=DOUBLE}, 
+      #{serviceScore,jdbcType=DOUBLE}, #{clickPraise,jdbcType=INTEGER}, #{orderId,jdbcType=BIGINT}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{goodOrBad,jdbcType=INTEGER})
+  </insert>
+    <insert id="insertSelective" parameterType="com.gbqd.pojo.order.CsStoreComment">
+        insert into cs_store_comment
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="storeId != null">
+                store_id,
+            </if>
+            <if test="memberId != null">
+                member_id,
+            </if>
+            <if test="content != null">
+                content,
+            </if>
+            <if test="healthScore != null">
+                health_score,
+            </if>
+            <if test="environmentScore != null">
+                environment_score,
+            </if>
+            <if test="serviceScore != null">
+                service_score,
+            </if>
+            <if test="clickPraise != null">
+                click_praise,
+            </if>
+            <if test="orderId != null">
+                order_id,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="goodOrBad != null">
+                good_or_bad,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="storeId != null">
+                #{storeId,jdbcType=BIGINT},
+            </if>
+            <if test="memberId != null">
+                #{memberId,jdbcType=VARCHAR},
+            </if>
+            <if test="content != null">
+                #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="healthScore != null">
+                #{healthScore,jdbcType=DOUBLE},
+            </if>
+            <if test="environmentScore != null">
+                #{environmentScore,jdbcType=DOUBLE},
+            </if>
+            <if test="serviceScore != null">
+                #{serviceScore,jdbcType=DOUBLE},
+            </if>
+            <if test="clickPraise != null">
+                #{clickPraise,jdbcType=INTEGER},
+            </if>
+            <if test="orderId != null">
+                #{orderId,jdbcType=BIGINT},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="goodOrBad != null">
+                #{goodOrBad,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.gbqd.pojo.order.CsStoreComment">
+        update cs_store_comment
+        <set>
+            <if test="storeId != null">
+                store_id = #{storeId,jdbcType=BIGINT},
+            </if>
+            <if test="memberId != null">
+                member_id = #{memberId,jdbcType=VARCHAR},
+            </if>
+            <if test="content != null">
+                content = #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="healthScore != null">
+                health_score = #{healthScore,jdbcType=DOUBLE},
+            </if>
+            <if test="environmentScore != null">
+                environment_score = #{environmentScore,jdbcType=DOUBLE},
+            </if>
+            <if test="serviceScore != null">
+                service_score = #{serviceScore,jdbcType=DOUBLE},
+            </if>
+            <if test="clickPraise != null">
+                click_praise = #{clickPraise,jdbcType=INTEGER},
+            </if>
+            <if test="orderId != null">
+                order_id = #{orderId,jdbcType=BIGINT},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="goodOrBad != null">
+                good_or_bad = #{goodOrBad,jdbcType=INTEGER},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.gbqd.pojo.order.CsStoreComment">
+    update cs_store_comment
+    set store_id = #{storeId,jdbcType=BIGINT},
+      member_id = #{memberId,jdbcType=VARCHAR},
+      content = #{content,jdbcType=VARCHAR},
+      health_score = #{healthScore,jdbcType=DOUBLE},
+      environment_score = #{environmentScore,jdbcType=DOUBLE},
+      service_score = #{serviceScore,jdbcType=DOUBLE},
+      click_praise = #{clickPraise,jdbcType=INTEGER},
+      order_id = #{orderId,jdbcType=BIGINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP}, good_or_bad = #{goodOrBad,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

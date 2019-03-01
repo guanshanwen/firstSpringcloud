@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="ExternalSystem" externalSystem="Maven" />
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <content url="file://$MODULE_DIR$/../src/main/java">
+      <sourceFolder url="file://$MODULE_DIR$/../src/main/java" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../src/main/resources">
+      <sourceFolder url="file://$MODULE_DIR$/../src/main/resources" type="java-resource" />
+    </content>
+    <content url="file://$MODULE_DIR$/../src/test/java">
+      <sourceFolder url="file://$MODULE_DIR$/../src/test/java" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -21,6 +29,9 @@
     <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper-spring-boot-autoconfigure:1.2.3" level="project" />
     <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper:5.1.2" level="project" />
     <orderEntry type="library" name="Maven: com.github.jsqlparser:jsqlparser:1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.quartz-scheduler:quartz:2.2.1" level="project" />
+    <orderEntry type="library" name="Maven: c3p0:c3p0:0.9.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.31" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.1.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.1.2.RELEASE" level="project" />
@@ -43,7 +54,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: net.minidev:json-smart:2.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: net.minidev:accessors-smart:1.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.ow2.asm:asm:5.0.4" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.12" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.assertj:assertj-core:3.11.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.mockito:mockito-core:2.23.4" level="project" />

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gbqd.mapper.CsStoreGoodsHotelCategoryMapper">
+    <resultMap id="BaseResultMap" type="com.gbqd.pojo.goods.CsStoreGoodsHotelCategory">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="p_id" jdbcType="BIGINT" property="pId"/>
+        <result column="gc_name" jdbcType="VARCHAR" property="gcName"/>
+        <result column="goods_type" jdbcType="INTEGER" property="goodsType"/>
+        <result column="gc_level" jdbcType="INTEGER" property="gcLevel"/>
+        <result column="store_id" jdbcType="BIGINT" property="storeId"/>
+        <result column="bed_type" jdbcType="INTEGER" property="bedType"/>
+        <result column="gc_price" jdbcType="DOUBLE" property="gcPrice"/>
+        <result column="vb_price" jdbcType="DOUBLE" property="vbPrice"/>
+        <result column="del_status" jdbcType="INTEGER" property="delStatus"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="item_code_bed_type" jdbcType="VARCHAR" property="itemCodeBedType"/>
+        <result column="or_breakfast" jdbcType="INTEGER" property="orBreakfast"/>
+        <result column="breakfast_money" jdbcType="DOUBLE" property="breakfastMoney"/>
+        <result column="bed_character" jdbcType="VARCHAR" property="bedCharacter"/>
+        <result column="shelves" jdbcType="INTEGER" property="shelves"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, p_id, gc_name, goods_type, gc_level, store_id, bed_type, gc_price, vb_price, 
+    del_status, create_time,item_code_bed_type,or_breakfast,breakfast_money,bed_character,shelves
+  </sql>
+
+    <select id="getCsStoreGoodsHotelCategoryList" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from cs_store_goods_hotel_category
+        where store_id = #{storeId,jdbcType=BIGINT} and del_status=1 and shelves = #{shelves,jdbcType=INTEGER}
+        <if test="gcName != null">
+            and gc_name LIKE "%"#{gcName}"%"
+        </if>
+        <if test="bedType != null">
+            and bed_type = #{bedType,jdbcType=INTEGER}
+        </if>
+        <if test="goodsType != null">
+            and goods_type = #{goodsType,jdbcType=INTEGER}
+        </if>
+        order by create_time desc
+    </select>
+
+    <select id="getCsStoreGoodsHotelCategoryByStoreId" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from cs_store_goods_hotel_category
+        where store_id = #{storeId,jdbcType=BIGINT} and del_status=1 and shelves=1 order by create_time desc
+    </select>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from cs_store_goods_hotel_category
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <select id="getCsStoreGoodsHotelCategoryByBedTypeOrRoomType" resultMap="BaseResultMap">
+        <![CDATA[
+        SELECT  ghc.id, ghc.p_id as pId, ghc.gc_name as gcName, ghc.goods_type as goodsType, ghc.gc_level as gcLevel , ghc.store_id as storeId, ghc.bed_type as bedType, ghc.gc_price as gcPrice, ghc.vb_price as vbPrice,
+                ghc.del_status as delStatus, ghc.create_time as createTime, gh.item_attr as itemAttr ,ghi.image_url as imageUrl from cs_store_goods_hotel_category ghc
+        inner JOIN cs_goods_hotel gh on ghc.id=gh.ghc_id
+        LEFT JOIN cs_goods_hotel_image ghi on ghi.room_id = gh.id
+        where not EXISTS(select 1 from cs_goods_hotel where ghc_id = gh.ghc_id and gh.id<id)
+        and not EXISTS(select 1 from cs_goods_hotel_image where room_id = ghi.room_id and ghi.id>id)
+        and ghc.store_id =#{storeId ,jdbcType=BIGINT}
+    ]]>
+        <if test="bedType !=null">
+            and gh.bed_type_key=#{bedType ,jdbcType=INTEGER}
+        </if>
+        <if test="roomType !=null">
+            and gh.room_type_id=#{roomType ,jdbcType=INTEGER}
+        </if>
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from cs_store_goods_hotel_category
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+    <insert id="insert" parameterType="com.gbqd.pojo.goods.CsStoreGoodsHotelCategory">
+    insert into cs_store_goods_hotel_category (id, p_id, gc_name, 
+      goods_type, gc_level, store_id, 
+      bed_type, gc_price, vb_price, 
+      del_status, create_time,item_code_bed_type,or_breakfast,breakfast_money,bed_character,shelves)
+    values (#{id,jdbcType=BIGINT}, #{pId,jdbcType=BIGINT}, #{gcName,jdbcType=VARCHAR}, 
+      #{goodsType,jdbcType=INTEGER}, #{gcLevel,jdbcType=INTEGER}, #{storeId,jdbcType=BIGINT}, 
+      #{bedType,jdbcType=INTEGER}, #{gcPrice,jdbcType=DOUBLE}, #{vbPrice,jdbcType=DOUBLE}, 
+      #{delStatus,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP},#{itemCodeBedType,jdbcType=VARCHAR},
+      #{orBreakfast,jdbcType=INTEGER}, #{breakfastMoney,jdbcType=DOUBLE}, #{bedCharacter,jdbcType=VARCHAR},#{shelves,jdbcType=INTEGER})
+  </insert>
+    <insert id="insertSelective" parameterType="com.gbqd.pojo.goods.CsStoreGoodsHotelCategory">
+        insert into cs_store_goods_hotel_category
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="pId != null">
+                p_id,
+            </if>
+            <if test="gcName != null">
+                gc_name,
+            </if>
+            <if test="goodsType != null">
+                goods_type,
+            </if>
+            <if test="gcLevel != null">
+                gc_level,
+            </if>
+            <if test="storeId != null">
+                store_id,
+            </if>
+            <if test="bedType != null">
+                bed_type,
+            </if>
+            <if test="gcPrice != null">
+                gc_price,
+            </if>
+            <if test="vbPrice != null">
+                vb_price,
+            </if>
+            <if test="delStatus != null">
+                del_status,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="itemCodeBedType != null">
+                item_code_bed_type,
+            </if>
+            <if test="orBreakfast != null">
+                or_breakfast,
+            </if>
+            <if test="breakfastMoney != null">
+                breakfast_money,
+            </if>
+            <if test="bedCharacter != null">
+                bed_character,
+            </if>
+            <if test="shelves != null">
+                shelves,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="pId != null">
+                #{pId,jdbcType=BIGINT},
+            </if>
+            <if test="gcName != null">
+                #{gcName,jdbcType=VARCHAR},
+            </if>
+            <if test="goodsType != null">
+                #{goodsType,jdbcType=INTEGER},
+            </if>
+            <if test="gcLevel != null">
+                #{gcLevel,jdbcType=INTEGER},
+            </if>
+            <if test="storeId != null">
+                #{storeId,jdbcType=BIGINT},
+            </if>
+            <if test="bedType != null">
+                #{bedType,jdbcType=INTEGER},
+            </if>
+            <if test="gcPrice != null">
+                #{gcPrice,jdbcType=DOUBLE},
+            </if>
+            <if test="vbPrice != null">
+                #{vbPrice,jdbcType=DOUBLE},
+            </if>
+            <if test="delStatus != null">
+                #{delStatus,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="itemCodeBedType != null">
+                #{itemCodeBedType,jdbcType=VARCHAR},
+            </if>
+            <if test="orBreakfast != null">
+                #{orBreakfast,jdbcType=INTEGER},
+            </if>
+            <if test="breakfastMoney != null">
+                #{breakfastMoney,jdbcType=DOUBLE},
+            </if>
+            <if test="bedCharacter != null">
+                #{bedCharacter,jdbcType=VARCHAR},
+            </if>
+            <if test="shelves != null">
+                #{shelves,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.gbqd.pojo.goods.CsStoreGoodsHotelCategory">
+        update cs_store_goods_hotel_category
+        <set>
+            <if test="pId != null">
+                p_id = #{pId,jdbcType=BIGINT},
+            </if>
+            <if test="gcName != null">
+                gc_name = #{gcName,jdbcType=VARCHAR},
+            </if>
+            <if test="goodsType != null">
+                goods_type = #{goodsType,jdbcType=INTEGER},
+            </if>
+            <if test="gcLevel != null">
+                gc_level = #{gcLevel,jdbcType=INTEGER},
+            </if>
+            <if test="storeId != null">
+                store_id = #{storeId,jdbcType=BIGINT},
+            </if>
+            <if test="bedType != null">
+                bed_type = #{bedType,jdbcType=INTEGER},
+            </if>
+            <if test="gcPrice != null">
+                gc_price = #{gcPrice,jdbcType=DOUBLE},
+            </if>
+            <if test="vbPrice != null">
+                vb_price = #{vbPrice,jdbcType=DOUBLE},
+            </if>
+            <if test="delStatus != null">
+                del_status = #{delStatus,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+
+            <if test="itemCodeBedType != null">
+                item_code_bed_typ = #{itemCodeBedType,jdbcType=VARCHAR},
+            </if>
+            <if test="orBreakfast != null">
+                or_breakfast = #{orBreakfast,jdbcType=INTEGER},
+            </if>
+            <if test="breakfastMoney != null">
+                breakfast_money = #{breakfastMoney,jdbcType=DOUBLE},
+            </if>
+            <if test="bedCharacter != null">
+                bed_character = #{bedCharacter,jdbcType=VARCHAR},
+            </if>
+            <if test="shelves != null">
+                shelves = #{shelves,jdbcType=INTEGER},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.gbqd.pojo.goods.CsStoreGoodsHotelCategory">
+    update cs_store_goods_hotel_category
+    set p_id = #{pId,jdbcType=BIGINT},
+      gc_name = #{gcName,jdbcType=VARCHAR},
+      goods_type = #{goodsType,jdbcType=INTEGER},
+      gc_level = #{gcLevel,jdbcType=INTEGER},
+      store_id = #{storeId,jdbcType=BIGINT},
+      bed_type = #{bedType,jdbcType=INTEGER},
+      gc_price = #{gcPrice,jdbcType=DOUBLE},
+      vb_price = #{vbPrice,jdbcType=DOUBLE},
+      del_status = #{delStatus,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+       item_code_bed_typ = #{itemCodeBedType,jdbcType=VARCHAR},
+        or_breakfast = #{orBreakfast,jdbcType=INTEGER},
+          breakfast_money = #{breakfastMoney,jdbcType=DOUBLE},
+             bed_character =  #{bedCharacter,jdbcType=VARCHAR},
+              shelves =   #{shelves,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

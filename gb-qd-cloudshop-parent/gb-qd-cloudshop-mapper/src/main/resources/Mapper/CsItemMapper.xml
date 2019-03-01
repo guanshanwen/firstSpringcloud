@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gbqd.mapper.CsItemMapper">
+  <resultMap id="BaseResultMap" type="com.gbqd.pojo.Item.CsItem">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="item_code" jdbcType="VARCHAR" property="itemCode" />
+    <result column="item_name" jdbcType="VARCHAR" property="itemName" />
+    <result column="scope_value" jdbcType="VARCHAR" property="scopeValue" />
+    <result column="parent_code" jdbcType="VARCHAR" property="parentCode" />
+    <result column="group_code" jdbcType="VARCHAR" property="groupCode" />
+    <result column="spec" jdbcType="VARCHAR" property="spec" />
+    <result column="del_status" jdbcType="INTEGER" property="delStatus" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, item_code, item_name, scope_value, parent_code, group_code, spec, del_status, 
+    create_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cs_item
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+
+  <select id="selectByItemCode"  parameterType="java.lang.String"  resultMap="BaseResultMap">
+    select   <include refid="Base_Column_List" /> from cs_item where item_code = #{item_code,jdbcType=VARCHAR}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from cs_item
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.gbqd.pojo.Item.CsItem">
+    insert into cs_item (id, item_code, item_name, 
+      scope_value, parent_code, group_code, 
+      spec, del_status, create_time
+      )
+    values (#{id,jdbcType=BIGINT}, #{itemCode,jdbcType=VARCHAR}, #{itemName,jdbcType=VARCHAR}, 
+      #{scopeValue,jdbcType=VARCHAR}, #{parentCode,jdbcType=VARCHAR}, #{groupCode,jdbcType=VARCHAR}, 
+      #{spec,jdbcType=VARCHAR}, #{delStatus,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.gbqd.pojo.Item.CsItem">
+    insert into cs_item
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="itemCode != null">
+        item_code,
+      </if>
+      <if test="itemName != null">
+        item_name,
+      </if>
+      <if test="scopeValue != null">
+        scope_value,
+      </if>
+      <if test="parentCode != null">
+        parent_code,
+      </if>
+      <if test="groupCode != null">
+        group_code,
+      </if>
+      <if test="spec != null">
+        spec,
+      </if>
+      <if test="delStatus != null">
+        del_status,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="itemCode != null">
+        #{itemCode,jdbcType=VARCHAR},
+      </if>
+      <if test="itemName != null">
+        #{itemName,jdbcType=VARCHAR},
+      </if>
+      <if test="scopeValue != null">
+        #{scopeValue,jdbcType=VARCHAR},
+      </if>
+      <if test="parentCode != null">
+        #{parentCode,jdbcType=VARCHAR},
+      </if>
+      <if test="groupCode != null">
+        #{groupCode,jdbcType=VARCHAR},
+      </if>
+      <if test="spec != null">
+        #{spec,jdbcType=VARCHAR},
+      </if>
+      <if test="delStatus != null">
+        #{delStatus,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gbqd.pojo.Item.CsItem">
+    update cs_item
+    <set>
+      <if test="itemCode != null">
+        item_code = #{itemCode,jdbcType=VARCHAR},
+      </if>
+      <if test="itemName != null">
+        item_name = #{itemName,jdbcType=VARCHAR},
+      </if>
+      <if test="scopeValue != null">
+        scope_value = #{scopeValue,jdbcType=VARCHAR},
+      </if>
+      <if test="parentCode != null">
+        parent_code = #{parentCode,jdbcType=VARCHAR},
+      </if>
+      <if test="groupCode != null">
+        group_code = #{groupCode,jdbcType=VARCHAR},
+      </if>
+      <if test="spec != null">
+        spec = #{spec,jdbcType=VARCHAR},
+      </if>
+      <if test="delStatus != null">
+        del_status = #{delStatus,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gbqd.pojo.Item.CsItem">
+    update cs_item
+    set item_code = #{itemCode,jdbcType=VARCHAR},
+      item_name = #{itemName,jdbcType=VARCHAR},
+      scope_value = #{scopeValue,jdbcType=VARCHAR},
+      parent_code = #{parentCode,jdbcType=VARCHAR},
+      group_code = #{groupCode,jdbcType=VARCHAR},
+      spec = #{spec,jdbcType=VARCHAR},
+      del_status = #{delStatus,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

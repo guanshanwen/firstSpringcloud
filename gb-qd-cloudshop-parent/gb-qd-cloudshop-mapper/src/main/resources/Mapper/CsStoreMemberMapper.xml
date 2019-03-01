@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gbqd.mapper.CsStoreMemberMapper">
+  <resultMap id="BaseResultMap" type="com.gbqd.pojo.goods.CsStoreMember">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="store_id" jdbcType="BIGINT" property="storeId" />
+    <result column="member_id" jdbcType="VARCHAR" property="memberId" />
+    <result column="vip_id" jdbcType="BIGINT" property="vipId" />
+    <result column="member_role" jdbcType="INTEGER" property="memberRole" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="del_status" jdbcType="TINYINT" property="delStatus" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, store_id, member_id, vip_id, member_role, create_time, update_time, del_status
+  </sql>
+  <select id="getStoreMemberList" resultMap="BaseResultMap">
+    select
+     a.id, a.store_id, a.member_id, a.vip_id, a.member_role, a.create_time, a.update_time, a.del_status,b.nickName ,b.phone,b.sex
+   from cs_store_member a LEFT JOIN cs_member b ON a.member_id=b.member_id
+    where a.store_id = #{storeId,jdbcType=BIGINT} and a.member_role=#{role}  ORDER BY a.create_time desc
+  </select>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cs_store_member
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from cs_store_member
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.gbqd.pojo.goods.CsStoreMember">
+    insert into cs_store_member (id, store_id, member_id, 
+      vip_id, member_role, create_time, 
+      update_time, del_status)
+    values (#{id,jdbcType=BIGINT}, #{storeId,jdbcType=BIGINT}, #{memberId,jdbcType=VARCHAR}, 
+      #{vipId,jdbcType=BIGINT}, #{memberRole,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{delStatus,jdbcType=TINYINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gbqd.pojo.goods.CsStoreMember">
+    insert into cs_store_member
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="storeId != null">
+        store_id,
+      </if>
+      <if test="memberId != null">
+        member_id,
+      </if>
+      <if test="vipId != null">
+        vip_id,
+      </if>
+      <if test="memberRole != null">
+        member_role,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="delStatus != null">
+        del_status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="storeId != null">
+        #{storeId,jdbcType=BIGINT},
+      </if>
+      <if test="memberId != null">
+        #{memberId,jdbcType=VARCHAR},
+      </if>
+      <if test="vipId != null">
+        #{vipId,jdbcType=BIGINT},
+      </if>
+      <if test="memberRole != null">
+        #{memberRole,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="delStatus != null">
+        #{delStatus,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gbqd.pojo.goods.CsStoreMember">
+    update cs_store_member
+    <set>
+      <if test="storeId != null">
+        store_id = #{storeId,jdbcType=BIGINT},
+      </if>
+      <if test="memberId != null">
+        member_id = #{memberId,jdbcType=VARCHAR},
+      </if>
+      <if test="vipId != null">
+        vip_id = #{vipId,jdbcType=BIGINT},
+      </if>
+      <if test="memberRole != null">
+        member_role = #{memberRole,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="delStatus != null">
+        del_status = #{delStatus,jdbcType=TINYINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gbqd.pojo.goods.CsStoreMember">
+    update cs_store_member
+    set store_id = #{storeId,jdbcType=BIGINT},
+      member_id = #{memberId,jdbcType=VARCHAR},
+      vip_id = #{vipId,jdbcType=BIGINT},
+      member_role = #{memberRole,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      del_status = #{delStatus,jdbcType=TINYINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+</mapper>

@@ -1,12 +1,18 @@
 package com.gbqd.service.order.service.impl;
 
-import com.gbqd.pojo.CsMember;
+import com.gbqd.common.utils.ResultCode;
+import com.gbqd.common.utils.enums.ResultCodeStatus;
+import com.gbqd.mapper.CsOrderMapper;
+import com.gbqd.pojo.order.CsOrder;
 import com.gbqd.service.order.OrderService;
 import com.gbqd.service.order.feign.MemberServiceFeign;
+import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @author MrWen
@@ -16,40 +22,30 @@ import org.springframework.web.bind.annotation.RestController;
 public class OrderServiceImpl implements OrderService {
     @Autowired
     MemberServiceFeign memberServiceFeign;
+    @Autowired
+    CsOrderMapper csOrderMapper;
+
     /**
-     * @param id 订单ID
-     * @param code 订单号
-     * @@describe: 返回订单信息实现类
+     * @param storeId  店铺ID
+     * @param memberId 用户ID
+     * @@describe: 查询用户的消费记录
      * @author: MrWen
-     * @return: java.lang.String
-     * @date: 2019/1/15 13:42
+     * @return: java.util.List<com.gbqd.pojo.order.CsOrder>
+     * @date: 2019/1/31 14:06
      */
-
-    public String getOrder(@RequestParam(value = "id", required = false) String id, @RequestParam(value = "code", required = false) String code) {
-        String memmsg=memberServiceFeign.gerMember("张衍军","33");
-        String msg="通过getOrder接口 获得id:"+id+"    和 code"+code+"  参数  和";
-        return msg+"             "+memmsg;
+    public ResultCode<PageInfo<CsOrder>> getOrderList(@RequestParam(value = "storeId", required = true) Long storeId,
+                                                      @RequestParam(value = "memberId", required = true) String memberId,
+                                                      @RequestParam(value = "PageNum", required = false, defaultValue = "1") Integer PageNum,
+                                                      @RequestParam(value = "pageSize", required = false,defaultValue = "10") Integer pageSize) {
+        PageHelper.startPage(PageNum, pageSize);
+        List<CsOrder> list = csOrderMapper.getOrderList(storeId, memberId);
+        ResultCode<PageInfo<CsOrder>> rc = new ResultCode<PageInfo<CsOrder>>();
+        PageInfo<CsOrder> pageInfoList = new PageInfo<CsOrder>(list);
+        rc.setContent(pageInfoList);
+        rc.setStatus(ResultCodeStatus.SUCCESS);
+        rc.setMsg(" 查询成功");
+        return rc;
     }
-
-    @Override
-    public PageInfo<CsMember> orderInser() {
-        return null;
-    }
-
-    @Override
-    public CsMember find(@RequestParam(value = "id", required = false) int id) {
-        return  memberServiceFeign.find(id);
-
-    }
-    /**
-     * 测试调用member用户inser接口
-     */
-  /*  @Override
-    public PageInfo<CsMember> orderInser() {
-        return memberServiceFeign.findList(1,3);
-
-    }
-*/
 
 
 }

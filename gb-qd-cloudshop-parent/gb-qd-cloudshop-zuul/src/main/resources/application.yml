@@ -19,6 +19,12 @@ zuul:
     order-service:
       path: /myServerOrder/**
       serviceId: service-order
+    goods-service:
+      path:  /myServerGoods/**
+      serviceId: service-goods
+    front-service:
+      path:  /myServerFront/**
+      serviceId: service-front
 ribbon:
   ReadTimeout: 6000
   ConnectTimeout: 6000

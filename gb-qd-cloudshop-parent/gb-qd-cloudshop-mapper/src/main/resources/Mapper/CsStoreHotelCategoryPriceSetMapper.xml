@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gbqd.mapper.CsStoreHotelCategoryPriceSetMapper">
+  <resultMap id="BaseResultMap" type="com.gbqd.pojo.goods.CsStoreHotelCategoryPriceSet">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="hotel_category_id" jdbcType="BIGINT" property="hotelCategoryId" />
+    <result column="money" jdbcType="DOUBLE" property="money" />
+    <result column="vb" jdbcType="DOUBLE" property="vb" />
+    <result column="begin_time" jdbcType="TIMESTAMP" property="beginTime" />
+    <result column="end_time" jdbcType="TIMESTAMP" property="endTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, hotel_category_id, money, vb, begin_time, end_time, create_time
+  </sql>
+  <select id="getPriceSetList" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from cs_store_hotel_category_price_set
+    where hotel_category_id = #{hotelCategoryId,jdbcType=BIGINT} order by create_time desc
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cs_store_hotel_category_price_set
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from cs_store_hotel_category_price_set
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.gbqd.pojo.goods.CsStoreHotelCategoryPriceSet">
+    insert into cs_store_hotel_category_price_set (id, hotel_category_id, money, 
+      vb, begin_time, end_time, 
+      create_time)
+    values (#{id,jdbcType=BIGINT}, #{hotelCategoryId,jdbcType=BIGINT}, #{money,jdbcType=DOUBLE}, 
+      #{vb,jdbcType=DOUBLE}, #{beginTime,jdbcType=TIMESTAMP}, #{endTime,jdbcType=TIMESTAMP}, 
+      #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gbqd.pojo.goods.CsStoreHotelCategoryPriceSet">
+    insert into cs_store_hotel_category_price_set
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="hotelCategoryId != null">
+        hotel_category_id,
+      </if>
+      <if test="money != null">
+        money,
+      </if>
+      <if test="vb != null">
+        vb,
+      </if>
+      <if test="beginTime != null">
+        begin_time,
+      </if>
+      <if test="endTime != null">
+        end_time,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="hotelCategoryId != null">
+        #{hotelCategoryId,jdbcType=BIGINT},
+      </if>
+      <if test="money != null">
+        #{money,jdbcType=DOUBLE},
+      </if>
+      <if test="vb != null">
+        #{vb,jdbcType=DOUBLE},
+      </if>
+      <if test="beginTime != null">
+        #{beginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null">
+        #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gbqd.pojo.goods.CsStoreHotelCategoryPriceSet">
+    update cs_store_hotel_category_price_set
+    <set>
+      <if test="hotelCategoryId != null">
+        hotel_category_id = #{hotelCategoryId,jdbcType=BIGINT},
+      </if>
+      <if test="money != null">
+        money = #{money,jdbcType=DOUBLE},
+      </if>
+      <if test="vb != null">
+        vb = #{vb,jdbcType=DOUBLE},
+      </if>
+      <if test="beginTime != null">
+        begin_time = #{beginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null">
+        end_time = #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gbqd.pojo.goods.CsStoreHotelCategoryPriceSet">
+    update cs_store_hotel_category_price_set
+    set hotel_category_id = #{hotelCategoryId,jdbcType=BIGINT},
+      money = #{money,jdbcType=DOUBLE},
+      vb = #{vb,jdbcType=DOUBLE},
+      begin_time = #{beginTime,jdbcType=TIMESTAMP},
+      end_time = #{endTime,jdbcType=TIMESTAMP},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,37 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.gbqd.mapper.CsMemberMapper">
-  <resultMap id="BaseResultMap" type="com.gbqd.pojo.CsMember">
-    <id column="id" jdbcType="INTEGER" property="id" />
+  <resultMap id="BaseResultMap" type="com.gbqd.pojo.member.CsMember">
+    <id column="id" jdbcType="BIGINT" property="id" />
     <result column="member_id" jdbcType="VARCHAR" property="memberId" />
-    <result column="sys_status" jdbcType="TINYINT" property="sysStatus" />
+    <result column="sys_status" jdbcType="INTEGER" property="sysStatus" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="log_time" jdbcType="TIMESTAMP" property="logTime" />
     <result column="log_out_time" jdbcType="TIMESTAMP" property="logOutTime" />
-    <result column="is_auth" jdbcType="TINYINT" property="isAuth" />
+    <result column="is_auth" jdbcType="INTEGER" property="isAuth" />
+    <result column="invitation_code" jdbcType="VARCHAR" property="invitationCode" />
+    <result column="inviter_id" jdbcType="VARCHAR" property="inviterId" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="sex" jdbcType="INTEGER" property="sex" />
+    <result column="head_portrait_url" jdbcType="VARCHAR" property="headPortraitUrl" />
+    <result column="pwd" jdbcType="VARCHAR" property="pwd" />
+    <result column="id_no" jdbcType="VARCHAR" property="idNo" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="real_name" jdbcType="VARCHAR" property="realName" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, member_id, sys_status, create_time, log_time, log_out_time, is_auth
+    id, member_id, sys_status, create_time, log_time, log_out_time, is_auth, invitation_code, 
+    inviter_id, nickname, phone, sex, head_portrait_url, pwd, id_no, address, real_name
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from cs_member
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from cs_member
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.gbqd.pojo.CsMember">
+  <insert id="insert" parameterType="com.gbqd.pojo.member.CsMember">
     insert into cs_member (id, member_id, sys_status, 
       create_time, log_time, log_out_time, 
-      is_auth)
-    values (#{id,jdbcType=INTEGER}, #{memberId,jdbcType=VARCHAR}, #{sysStatus,jdbcType=TINYINT}, 
+      is_auth, invitation_code, inviter_id, 
+      nickname, phone, sex, 
+      head_portrait_url, pwd, id_no, 
+      address, real_name)
+    values (#{id,jdbcType=BIGINT}, #{memberId,jdbcType=VARCHAR}, #{sysStatus,jdbcType=INTEGER}, 
       #{createTime,jdbcType=TIMESTAMP}, #{logTime,jdbcType=TIMESTAMP}, #{logOutTime,jdbcType=TIMESTAMP}, 
-      #{isAuth,jdbcType=TINYINT})
+      #{isAuth,jdbcType=INTEGER}, #{invitationCode,jdbcType=VARCHAR}, #{inviterId,jdbcType=VARCHAR}, 
+      #{nickname,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{sex,jdbcType=INTEGER}, 
+      #{headPortraitUrl,jdbcType=VARCHAR}, #{pwd,jdbcType=VARCHAR}, #{idNo,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{realName,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.gbqd.pojo.CsMember">
+  <insert id="insertSelective" parameterType="com.gbqd.pojo.member.CsMember">
     insert into cs_member
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -55,16 +72,46 @@
       <if test="isAuth != null">
         is_auth,
       </if>
+      <if test="invitationCode != null">
+        invitation_code,
+      </if>
+      <if test="inviterId != null">
+        inviter_id,
+      </if>
+      <if test="nickname != null">
+        nickname,
+      </if>
+      <if test="phone != null">
+        phone,
+      </if>
+      <if test="sex != null">
+        sex,
+      </if>
+      <if test="headPortraitUrl != null">
+        head_portrait_url,
+      </if>
+      <if test="pwd != null">
+        pwd,
+      </if>
+      <if test="idNo != null">
+        id_no,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="realName != null">
+        real_name,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
-        #{id,jdbcType=INTEGER},
+        #{id,jdbcType=BIGINT},
       </if>
       <if test="memberId != null">
         #{memberId,jdbcType=VARCHAR},
       </if>
       <if test="sysStatus != null">
-        #{sysStatus,jdbcType=TINYINT},
+        #{sysStatus,jdbcType=INTEGER},
       </if>
       <if test="createTime != null">
         #{createTime,jdbcType=TIMESTAMP},
@@ -76,18 +123,48 @@
         #{logOutTime,jdbcType=TIMESTAMP},
       </if>
       <if test="isAuth != null">
-        #{isAuth,jdbcType=TINYINT},
+        #{isAuth,jdbcType=INTEGER},
+      </if>
+      <if test="invitationCode != null">
+        #{invitationCode,jdbcType=VARCHAR},
+      </if>
+      <if test="inviterId != null">
+        #{inviterId,jdbcType=VARCHAR},
+      </if>
+      <if test="nickname != null">
+        #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=INTEGER},
+      </if>
+      <if test="headPortraitUrl != null">
+        #{headPortraitUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="pwd != null">
+        #{pwd,jdbcType=VARCHAR},
+      </if>
+      <if test="idNo != null">
+        #{idNo,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="realName != null">
+        #{realName,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.gbqd.pojo.CsMember">
+  <update id="updateByPrimaryKeySelective" parameterType="com.gbqd.pojo.member.CsMember">
     update cs_member
     <set>
       <if test="memberId != null">
         member_id = #{memberId,jdbcType=VARCHAR},
       </if>
       <if test="sysStatus != null">
-        sys_status = #{sysStatus,jdbcType=TINYINT},
+        sys_status = #{sysStatus,jdbcType=INTEGER},
       </if>
       <if test="createTime != null">
         create_time = #{createTime,jdbcType=TIMESTAMP},
@@ -99,20 +176,75 @@
         log_out_time = #{logOutTime,jdbcType=TIMESTAMP},
       </if>
       <if test="isAuth != null">
-        is_auth = #{isAuth,jdbcType=TINYINT},
+        is_auth = #{isAuth,jdbcType=INTEGER},
+      </if>
+      <if test="invitationCode != null">
+        invitation_code = #{invitationCode,jdbcType=VARCHAR},
+      </if>
+      <if test="inviterId != null">
+        inviter_id = #{inviterId,jdbcType=VARCHAR},
+      </if>
+      <if test="nickname != null">
+        nickname = #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        sex = #{sex,jdbcType=INTEGER},
+      </if>
+      <if test="headPortraitUrl != null">
+        head_portrait_url = #{headPortraitUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="pwd != null">
+        pwd = #{pwd,jdbcType=VARCHAR},
+      </if>
+      <if test="idNo != null">
+        id_no = #{idNo,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="realName != null">
+        real_name = #{realName,jdbcType=VARCHAR},
       </if>
     </set>
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.gbqd.pojo.CsMember">
+  <update id="updateByPrimaryKey" parameterType="com.gbqd.pojo.member.CsMember">
     update cs_member
     set member_id = #{memberId,jdbcType=VARCHAR},
-      sys_status = #{sysStatus,jdbcType=TINYINT},
+      sys_status = #{sysStatus,jdbcType=INTEGER},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       log_time = #{logTime,jdbcType=TIMESTAMP},
       log_out_time = #{logOutTime,jdbcType=TIMESTAMP},
-      is_auth = #{isAuth,jdbcType=TINYINT}
-    where id = #{id,jdbcType=INTEGER}
+      is_auth = #{isAuth,jdbcType=INTEGER},
+      invitation_code = #{invitationCode,jdbcType=VARCHAR},
+      inviter_id = #{inviterId,jdbcType=VARCHAR},
+      nickname = #{nickname,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=INTEGER},
+      head_portrait_url = #{headPortraitUrl,jdbcType=VARCHAR},
+      pwd = #{pwd,jdbcType=VARCHAR},
+      id_no = #{idNo,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      real_name = #{realName,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
   </update>
+  <select id="selectByPrimaryMemberId" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from cs_member
+    where member_id = #{memberId,jdbcType=VARCHAR}
+  </select>
+
+  <select id="selectByPhone" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from cs_member
+    where phone = #{phone,jdbcType=VARCHAR}
+  </select>
+
+
 
 </mapper>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gbqd.mapper.CsOrderMapper">
+  <resultMap id="BaseResultMap" type="com.gbqd.pojo.order.CsOrder">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="order_code" jdbcType="VARCHAR" property="orderCode" />
+    <result column="amount_money" jdbcType="DOUBLE" property="amountMoney" />
+    <result column="customer_status" jdbcType="INTEGER" property="customerStatus" />
+    <result column="merchant_status" jdbcType="INTEGER" property="merchantStatus" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="pay_type" jdbcType="INTEGER" property="payType" />
+    <result column="if_invoice" jdbcType="INTEGER" property="ifInvoice" />
+    <result column="store_id" jdbcType="BIGINT" property="storeId" />
+    <result column="member_id" jdbcType="VARCHAR" property="memberId" />
+    <result column="discount_num" jdbcType="DOUBLE" property="discountNum" />
+    <result column="order_begin_time" jdbcType="TIMESTAMP" property="orderBeginTime" />
+    <result column="end_begin_time" jdbcType="TIMESTAMP" property="endBeginTime" />
+    <result column="telephone" jdbcType="VARCHAR" property="telephone" />
+    <result column="order_type" jdbcType="INTEGER" property="orderType" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="actual_in_time" jdbcType="TIMESTAMP" property="actualInTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, order_code, amount_money, customer_status, merchant_status, create_time, pay_type, 
+    if_invoice, store_id, member_id, discount_num, order_begin_time, end_begin_time, 
+    telephone, order_type, status, actual_in_time
+  </sql>
+
+  <select id="getOrderList" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from cs_order
+    where store_id = #{storeId,jdbcType=BIGINT} and member_id= #{memberId,jdbcType=VARCHAR} order by  create_time desc
+  </select>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cs_order
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from cs_order
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.gbqd.pojo.order.CsOrder">
+    insert into cs_order (id, order_code, amount_money, 
+      customer_status, merchant_status, create_time, 
+      pay_type, if_invoice, store_id, 
+      member_id, discount_num, order_begin_time, 
+      end_begin_time, telephone, order_type, 
+      status, actual_in_time)
+    values (#{id,jdbcType=BIGINT}, #{orderCode,jdbcType=VARCHAR}, #{amountMoney,jdbcType=DOUBLE}, 
+      #{customerStatus,jdbcType=INTEGER}, #{merchantStatus,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{payType,jdbcType=INTEGER}, #{ifInvoice,jdbcType=INTEGER}, #{storeId,jdbcType=BIGINT}, 
+      #{memberId,jdbcType=VARCHAR}, #{discountNum,jdbcType=DOUBLE}, #{orderBeginTime,jdbcType=TIMESTAMP}, 
+      #{endBeginTime,jdbcType=TIMESTAMP}, #{telephone,jdbcType=VARCHAR}, #{orderType,jdbcType=INTEGER}, 
+      #{status,jdbcType=INTEGER}, #{actualInTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gbqd.pojo.order.CsOrder">
+    insert into cs_order
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="orderCode != null">
+        order_code,
+      </if>
+      <if test="amountMoney != null">
+        amount_money,
+      </if>
+      <if test="customerStatus != null">
+        customer_status,
+      </if>
+      <if test="merchantStatus != null">
+        merchant_status,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="payType != null">
+        pay_type,
+      </if>
+      <if test="ifInvoice != null">
+        if_invoice,
+      </if>
+      <if test="storeId != null">
+        store_id,
+      </if>
+      <if test="memberId != null">
+        member_id,
+      </if>
+      <if test="discountNum != null">
+        discount_num,
+      </if>
+      <if test="orderBeginTime != null">
+        order_begin_time,
+      </if>
+      <if test="endBeginTime != null">
+        end_begin_time,
+      </if>
+      <if test="telephone != null">
+        telephone,
+      </if>
+      <if test="orderType != null">
+        order_type,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="actualInTime != null">
+        actual_in_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="orderCode != null">
+        #{orderCode,jdbcType=VARCHAR},
+      </if>
+      <if test="amountMoney != null">
+        #{amountMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="customerStatus != null">
+        #{customerStatus,jdbcType=INTEGER},
+      </if>
+      <if test="merchantStatus != null">
+        #{merchantStatus,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="payType != null">
+        #{payType,jdbcType=INTEGER},
+      </if>
+      <if test="ifInvoice != null">
+        #{ifInvoice,jdbcType=INTEGER},
+      </if>
+      <if test="storeId != null">
+        #{storeId,jdbcType=BIGINT},
+      </if>
+      <if test="memberId != null">
+        #{memberId,jdbcType=VARCHAR},
+      </if>
+      <if test="discountNum != null">
+        #{discountNum,jdbcType=DOUBLE},
+      </if>
+      <if test="orderBeginTime != null">
+        #{orderBeginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endBeginTime != null">
+        #{endBeginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="telephone != null">
+        #{telephone,jdbcType=VARCHAR},
+      </if>
+      <if test="orderType != null">
+        #{orderType,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="actualInTime != null">
+        #{actualInTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gbqd.pojo.order.CsOrder">
+    update cs_order
+    <set>
+      <if test="orderCode != null">
+        order_code = #{orderCode,jdbcType=VARCHAR},
+      </if>
+      <if test="amountMoney != null">
+        amount_money = #{amountMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="customerStatus != null">
+        customer_status = #{customerStatus,jdbcType=INTEGER},
+      </if>
+      <if test="merchantStatus != null">
+        merchant_status = #{merchantStatus,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="payType != null">
+        pay_type = #{payType,jdbcType=INTEGER},
+      </if>
+      <if test="ifInvoice != null">
+        if_invoice = #{ifInvoice,jdbcType=INTEGER},
+      </if>
+      <if test="storeId != null">
+        store_id = #{storeId,jdbcType=BIGINT},
+      </if>
+      <if test="memberId != null">
+        member_id = #{memberId,jdbcType=VARCHAR},
+      </if>
+      <if test="discountNum != null">
+        discount_num = #{discountNum,jdbcType=DOUBLE},
+      </if>
+      <if test="orderBeginTime != null">
+        order_begin_time = #{orderBeginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endBeginTime != null">
+        end_begin_time = #{endBeginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="telephone != null">
+        telephone = #{telephone,jdbcType=VARCHAR},
+      </if>
+      <if test="orderType != null">
+        order_type = #{orderType,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="actualInTime != null">
+        actual_in_time = #{actualInTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gbqd.pojo.order.CsOrder">
+    update cs_order
+    set order_code = #{orderCode,jdbcType=VARCHAR},
+      amount_money = #{amountMoney,jdbcType=DOUBLE},
+      customer_status = #{customerStatus,jdbcType=INTEGER},
+      merchant_status = #{merchantStatus,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      pay_type = #{payType,jdbcType=INTEGER},
+      if_invoice = #{ifInvoice,jdbcType=INTEGER},
+      store_id = #{storeId,jdbcType=BIGINT},
+      member_id = #{memberId,jdbcType=VARCHAR},
+      discount_num = #{discountNum,jdbcType=DOUBLE},
+      order_begin_time = #{orderBeginTime,jdbcType=TIMESTAMP},
+      end_begin_time = #{endBeginTime,jdbcType=TIMESTAMP},
+      telephone = #{telephone,jdbcType=VARCHAR},
+      order_type = #{orderType,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER},
+      actual_in_time = #{actualInTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gbqd.mapper.CsStoreCommentComponentMapper">
+  <resultMap id="BaseResultMap" type="com.gbqd.pojo.order.CsStoreCommentComponent">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="component_url" jdbcType="VARCHAR" property="componentUrl" />
+    <result column="comment_id" jdbcType="BIGINT" property="commentId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, type, component_url, comment_id, create_time
+  </sql>
+
+  <select id="getList" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from cs_store_comment_component
+    where comment_id = #{commentId,jdbcType=BIGINT} order by create_time desc
+  </select>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cs_store_comment_component
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from cs_store_comment_component
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.gbqd.pojo.order.CsStoreCommentComponent">
+    insert into cs_store_comment_component (id, type, component_url, 
+      comment_id, create_time)
+    values (#{id,jdbcType=BIGINT}, #{type,jdbcType=INTEGER}, #{componentUrl,jdbcType=VARCHAR}, 
+      #{commentId,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gbqd.pojo.order.CsStoreCommentComponent">
+    insert into cs_store_comment_component
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="componentUrl != null">
+        component_url,
+      </if>
+      <if test="commentId != null">
+        comment_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="componentUrl != null">
+        #{componentUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="commentId != null">
+        #{commentId,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gbqd.pojo.order.CsStoreCommentComponent">
+    update cs_store_comment_component
+    <set>
+      <if test="type != null">
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="componentUrl != null">
+        component_url = #{componentUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="commentId != null">
+        comment_id = #{commentId,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gbqd.pojo.order.CsStoreCommentComponent">
+    update cs_store_comment_component
+    set type = #{type,jdbcType=INTEGER},
+      component_url = #{componentUrl,jdbcType=VARCHAR},
+      comment_id = #{commentId,jdbcType=BIGINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gbqd.mapper.CsBusinessHierarchyMapper">
+  <resultMap id="BaseResultMap" type="com.gbqd.pojo.CsBusinessHierarchy">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="bu_code" jdbcType="VARCHAR" property="buCode" />
+    <result column="p_id" jdbcType="BIGINT" property="pId" />
+    <result column="bu_name" jdbcType="VARCHAR" property="buName" />
+    <result column="bu_level" jdbcType="INTEGER" property="buLevel" />
+    <result column="del_status" jdbcType="INTEGER" property="delStatus" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, bu_code, p_id, bu_name, bu_level, del_status, create_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cs_business_hierarchy
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from cs_business_hierarchy
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.gbqd.pojo.CsBusinessHierarchy">
+    insert into cs_business_hierarchy (id, bu_code, p_id, 
+      bu_name, bu_level, del_status, 
+      create_time)
+    values (#{id,jdbcType=BIGINT}, #{buCode,jdbcType=VARCHAR}, #{pId,jdbcType=BIGINT}, 
+      #{buName,jdbcType=VARCHAR}, #{buLevel,jdbcType=INTEGER}, #{delStatus,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gbqd.pojo.CsBusinessHierarchy">
+    insert into cs_business_hierarchy
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="buCode != null">
+        bu_code,
+      </if>
+      <if test="pId != null">
+        p_id,
+      </if>
+      <if test="buName != null">
+        bu_name,
+      </if>
+      <if test="buLevel != null">
+        bu_level,
+      </if>
+      <if test="delStatus != null">
+        del_status,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="buCode != null">
+        #{buCode,jdbcType=VARCHAR},
+      </if>
+      <if test="pId != null">
+        #{pId,jdbcType=BIGINT},
+      </if>
+      <if test="buName != null">
+        #{buName,jdbcType=VARCHAR},
+      </if>
+      <if test="buLevel != null">
+        #{buLevel,jdbcType=INTEGER},
+      </if>
+      <if test="delStatus != null">
+        #{delStatus,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gbqd.pojo.CsBusinessHierarchy">
+    update cs_business_hierarchy
+    <set>
+      <if test="buCode != null">
+        bu_code = #{buCode,jdbcType=VARCHAR},
+      </if>
+      <if test="pId != null">
+        p_id = #{pId,jdbcType=BIGINT},
+      </if>
+      <if test="buName != null">
+        bu_name = #{buName,jdbcType=VARCHAR},
+      </if>
+      <if test="buLevel != null">
+        bu_level = #{buLevel,jdbcType=INTEGER},
+      </if>
+      <if test="delStatus != null">
+        del_status = #{delStatus,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gbqd.pojo.CsBusinessHierarchy">
+    update cs_business_hierarchy
+    set bu_code = #{buCode,jdbcType=VARCHAR},
+      p_id = #{pId,jdbcType=BIGINT},
+      bu_name = #{buName,jdbcType=VARCHAR},
+      bu_level = #{buLevel,jdbcType=INTEGER},
+      del_status = #{delStatus,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+</mapper>

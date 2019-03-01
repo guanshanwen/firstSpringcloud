@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gbqd.mapper.CsGoodsHotelMapper">
+    <resultMap id="BaseResultMap" type="com.gbqd.pojo.goods.CsGoodsHotel">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="ghc_id" jdbcType="BIGINT" property="ghcId"/>
+        <result column="g_name" jdbcType="VARCHAR" property="gName"/>
+        <result column="store_id" jdbcType="BIGINT" property="storeId"/>
+        <result column="bu_id" jdbcType="BIGINT" property="buId"/>
+        <result column="bed_type_key" jdbcType="INTEGER" property="bedTypeKey"/>
+        <result column="bed_type_name" jdbcType="VARCHAR" property="bedTypeName"/>
+        <result column="room_type_id" jdbcType="BIGINT" property="roomTypeId"/>
+        <result column="room_type_name" jdbcType="VARCHAR" property="roomTypeName"/>
+        <result column="room_desc" jdbcType="VARCHAR" property="roomDesc"/>
+        <result column="number_people" jdbcType="INTEGER" property="numberPeople"/>
+        <result column="tem_id" jdbcType="BIGINT" property="temId"/>
+        <result column="item_attr" jdbcType="VARCHAR" property="itemAttr"/>
+        <result column="item_attr_expand" jdbcType="VARCHAR" property="itemAttrExpand"/>
+        <result column="room_status" jdbcType="INTEGER" property="roomStatus"/>
+        <result column="sale_status" jdbcType="INTEGER" property="saleStatus"/>
+        <result column="del_status" jdbcType="INTEGER" property="delStatus"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="area" jdbcType="VARCHAR" property="area"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, ghc_id, g_name, store_id, bu_id, bed_type_key, bed_type_name, room_type_id, room_type_name,
+    room_desc, number_people, tem_id, item_attr, item_attr_expand, room_status, sale_status, 
+    del_status, create_time,area
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from cs_goods_hotel
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from cs_goods_hotel
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+    <insert id="insert" parameterType="com.gbqd.pojo.goods.CsGoodsHotel">
+    insert into cs_goods_hotel (id, ghc_id,g_name, store_id,
+      bu_id, bed_type_key, bed_type_name, 
+      room_type_id, room_type_name, room_desc, 
+      number_people, tem_id, item_attr, 
+      item_attr_expand, room_status, sale_status, 
+      del_status, create_time,area)
+    values (#{id,jdbcType=BIGINT},#{ghcId,jdbcType=BIGINT}, #{gName,jdbcType=VARCHAR}, #{storeId,jdbcType=BIGINT},
+      #{buId,jdbcType=BIGINT}, #{bedTypeKey,jdbcType=INTEGER}, #{bedTypeName,jdbcType=VARCHAR}, 
+      #{roomTypeId,jdbcType=BIGINT}, #{roomTypeName,jdbcType=VARCHAR}, #{roomDesc,jdbcType=VARCHAR}, 
+      #{numberPeople,jdbcType=INTEGER}, #{temId,jdbcType=BIGINT}, #{itemAttr,jdbcType=VARCHAR}, 
+      #{itemAttrExpand,jdbcType=VARCHAR}, #{roomStatus,jdbcType=INTEGER}, #{saleStatus,jdbcType=INTEGER}, 
+      #{delStatus,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP},#{area,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.gbqd.pojo.goods.CsGoodsHotel">
+        insert into cs_goods_hotel
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="ghcId != null">
+                ghc_id,
+            </if>
+            <if test="gName != null">
+                g_name,
+            </if>
+            <if test="storeId != null">
+                store_id,
+            </if>
+            <if test="buId != null">
+                bu_id,
+            </if>
+            <if test="bedTypeKey != null">
+                bed_type_key,
+            </if>
+            <if test="bedTypeName != null">
+                bed_type_name,
+            </if>
+            <if test="roomTypeId != null">
+                room_type_id,
+            </if>
+            <if test="roomTypeName != null">
+                room_type_name,
+            </if>
+            <if test="roomDesc != null">
+                room_desc,
+            </if>
+            <if test="numberPeople != null">
+                number_people,
+            </if>
+            <if test="temId != null">
+                tem_id,
+            </if>
+            <if test="itemAttr != null">
+                item_attr,
+            </if>
+            <if test="itemAttrExpand != null">
+                item_attr_expand,
+            </if>
+            <if test="roomStatus != null">
+                room_status,
+            </if>
+            <if test="saleStatus != null">
+                sale_status,
+            </if>
+            <if test="delStatus != null">
+                del_status,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="area != null">
+                area,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="ghcId != null">
+                #{ghcId,jdbcType=BIGINT},
+            </if>
+            <if test="gName != null">
+                #{gName,jdbcType=VARCHAR},
+            </if>
+            <if test="storeId != null">
+                #{storeId,jdbcType=BIGINT},
+            </if>
+            <if test="buId != null">
+                #{buId,jdbcType=BIGINT},
+            </if>
+            <if test="bedTypeKey != null">
+                #{bedTypeKey,jdbcType=INTEGER},
+            </if>
+            <if test="bedTypeName != null">
+                #{bedTypeName,jdbcType=VARCHAR},
+            </if>
+            <if test="roomTypeId != null">
+                #{roomTypeId,jdbcType=BIGINT},
+            </if>
+            <if test="roomTypeName != null">
+                #{roomTypeName,jdbcType=VARCHAR},
+            </if>
+            <if test="roomDesc != null">
+                #{roomDesc,jdbcType=VARCHAR},
+            </if>
+            <if test="numberPeople != null">
+                #{numberPeople,jdbcType=INTEGER},
+            </if>
+            <if test="temId != null">
+                #{temId,jdbcType=BIGINT},
+            </if>
+            <if test="itemAttr != null">
+                #{itemAttr,jdbcType=VARCHAR},
+            </if>
+            <if test="itemAttrExpand != null">
+                #{itemAttrExpand,jdbcType=VARCHAR},
+            </if>
+            <if test="roomStatus != null">
+                #{roomStatus,jdbcType=INTEGER},
+            </if>
+            <if test="saleStatus != null">
+                #{saleStatus,jdbcType=INTEGER},
+            </if>
+            <if test="delStatus != null">
+                #{delStatus,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="area != null">
+                #{area,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.gbqd.pojo.goods.CsGoodsHotel">
+        update cs_goods_hotel
+        <set>
+            <if test="ghcId != null">
+                ghc_id = #{ghcId,jdbcType=BIGINT},
+            </if>
+            <if test="gName != null">
+                g_name = #{gName,jdbcType=VARCHAR},
+            </if>
+            <if test="storeId != null">
+                store_id = #{storeId,jdbcType=BIGINT},
+            </if>
+            <if test="buId != null">
+                bu_id = #{buId,jdbcType=BIGINT},
+            </if>
+            <if test="bedTypeKey != null">
+                bed_type_key = #{bedTypeKey,jdbcType=INTEGER},
+            </if>
+            <if test="bedTypeName != null">
+                bed_type_name = #{bedTypeName,jdbcType=VARCHAR},
+            </if>
+            <if test="roomTypeId != null">
+                room_type_id = #{roomTypeId,jdbcType=BIGINT},
+            </if>
+            <if test="roomTypeName != null">
+                room_type_name = #{roomTypeName,jdbcType=VARCHAR},
+            </if>
+            <if test="roomDesc != null">
+                room_desc = #{roomDesc,jdbcType=VARCHAR},
+            </if>
+            <if test="numberPeople != null">
+                number_people = #{numberPeople,jdbcType=INTEGER},
+            </if>
+            <if test="temId != null">
+                tem_id = #{temId,jdbcType=BIGINT},
+            </if>
+            <if test="itemAttr != null">
+                item_attr = #{itemAttr,jdbcType=VARCHAR},
+            </if>
+            <if test="itemAttrExpand != null">
+                item_attr_expand = #{itemAttrExpand,jdbcType=VARCHAR},
+            </if>
+            <if test="roomStatus != null">
+                room_status = #{roomStatus,jdbcType=INTEGER},
+            </if>
+            <if test="saleStatus != null">
+                sale_status = #{saleStatus,jdbcType=INTEGER},
+            </if>
+            <if test="delStatus != null">
+                del_status = #{delStatus,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="area != null">
+                area= #{area,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.gbqd.pojo.goods.CsGoodsHotel">
+    update cs_goods_hotel
+    set ghc_id = #{ghcId,jdbcType=BIGINT}, g_name = #{gName,jdbcType=VARCHAR},
+      store_id = #{storeId,jdbcType=BIGINT},
+      bu_id = #{buId,jdbcType=BIGINT},
+      bed_type_key = #{bedTypeKey,jdbcType=INTEGER},
+      bed_type_name = #{bedTypeName,jdbcType=VARCHAR},
+      room_type_id = #{roomTypeId,jdbcType=BIGINT},
+      room_type_name = #{roomTypeName,jdbcType=VARCHAR},
+      room_desc = #{roomDesc,jdbcType=VARCHAR},
+      number_people = #{numberPeople,jdbcType=INTEGER},
+      tem_id = #{temId,jdbcType=BIGINT},
+      item_attr = #{itemAttr,jdbcType=VARCHAR},
+      item_attr_expand = #{itemAttrExpand,jdbcType=VARCHAR},
+      room_status = #{roomStatus,jdbcType=INTEGER},
+      sale_status = #{saleStatus,jdbcType=INTEGER},
+      del_status = #{delStatus,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+         area=   #{area,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+
+    <select id="getRoomFromGcId" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from cs_goods_hotel where ghc_id = #{gcRoomId,jdbcType=BIGINT}
+    </select>
+    <select id="getRoomList" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from cs_goods_hotel where ghc_id = #{ghcId,jdbcType=BIGINT} and store_id = #{storeId,jdbcType=BIGINT}
+        <if test="gName != null">
+             and g_name LIKE "%"#{gName}"%"
+        </if>
+        <if test="roomStatus != null">
+             and room_status = #{roomStatus,jdbcType=INTEGER}
+        </if>
+        order by create_time desc
+    </select>
+</mapper>

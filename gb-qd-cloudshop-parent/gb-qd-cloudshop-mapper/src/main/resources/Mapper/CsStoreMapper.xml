@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gbqd.mapper.CsStoreMapper">
+    <resultMap id="BaseResultMap" type="com.gbqd.pojo.goods.CsStore">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="store_code" jdbcType="VARCHAR" property="storeCode"/>
+        <result column="store_name" jdbcType="VARCHAR" property="storeName"/>
+        <result column="member_id" jdbcType="VARCHAR" property="memberId"/>
+        <result column="member_name" jdbcType="VARCHAR" property="memberName"/>
+        <result column="bu_p_id" jdbcType="BIGINT" property="buPId"/>
+        <result column="bu_id" jdbcType="BIGINT" property="buId"/>
+        <result column="store_image_log" jdbcType="VARCHAR" property="storeImageLog"/>
+        <result column="store_desc" jdbcType="VARCHAR" property="storeDesc"/>
+        <result column="store_image_xkz" jdbcType="VARCHAR" property="storeImageXkz"/>
+        <result column="store_tel" jdbcType="VARCHAR" property="storeTel"/>
+        <result column="identy_no" jdbcType="VARCHAR" property="identyNo"/>
+        <result column="telep_no" jdbcType="VARCHAR" property="telepNo"/>
+        <result column="email" jdbcType="VARCHAR" property="email"/>
+        <result column="address" jdbcType="VARCHAR" property="address"/>
+        <result column="province_code" jdbcType="VARCHAR" property="provinceCode"/>
+        <result column="city_code" jdbcType="VARCHAR" property="cityCode"/>
+        <result column="zone_code" jdbcType="VARCHAR" property="zoneCode"/>
+        <result column="company_name" jdbcType="VARCHAR" property="companyName"/>
+        <result column="legal_person" jdbcType="VARCHAR" property="legalPerson"/>
+        <result column="idcard_image_front" jdbcType="VARCHAR" property="idcardImageFront"/>
+        <result column="idcard_image_opposite" jdbcType="VARCHAR" property="idcardImageOpposite"/>
+        <result column="license_imgage" jdbcType="VARCHAR" property="licenseImgage"/>
+        <result column="license_no" jdbcType="VARCHAR" property="licenseNo"/>
+        <result column="app_id" jdbcType="BIGINT" property="appId"/>
+        <result column="app_status" jdbcType="INTEGER" property="appStatus"/>
+        <result column="rmb_account" jdbcType="DOUBLE" property="rmbAccount"/>
+        <result column="vb_account" jdbcType="DOUBLE" property="vbAccount"/>
+        <result column="longitude" jdbcType="VARCHAR" property="longitude"/>
+        <result column="latitude" jdbcType="VARCHAR" property="latitude"/>
+        <result column="credit_score" jdbcType="DOUBLE" property="creditScore"/>
+        <result column="health_score" jdbcType="DOUBLE" property="healthScore"/>
+        <result column="environment_score" jdbcType="DOUBLE" property="environmentScore"/>
+        <result column="service_score" jdbcType="DOUBLE" property="serviceScore"/>
+        <result column="management_state" jdbcType="INTEGER" property="managementState"/>
+        <result column="available_account" jdbcType="DOUBLE" property="availableAccount"/>
+        <result column="frozen_account" jdbcType="DOUBLE" property="frozenAccount"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="del_status" jdbcType="INTEGER" property="delStatus"/>
+        <result column="average_price" jdbcType="INTEGER" property="averagePrice"/>
+        <result column="or_sharing_time" jdbcType="INTEGER" property="orSharingTime"/>
+        <result column="or_their_own" jdbcType="INTEGER" property="orTheirOwn"/>
+        <result column="minimum_time" jdbcType="DOUBLE" property="minimumTime"/>
+        <result column="refund_rate" jdbcType="DOUBLE" property="refundRate"/>
+        <result column="refund_policy" jdbcType="VARCHAR" property="refundPolicy"/>
+        <result column="recommended" jdbcType="VARCHAR" property="recommended"/>
+        <result column="features" jdbcType="VARCHAR" property="features"/>
+        <result column="introduction" jdbcType="VARCHAR" property="introduction"/>
+        <result column="discount" jdbcType="DOUBLE" property="discount"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, store_code, store_name, member_id, member_name, bu_p_id, bu_id, store_image_log, 
+    store_desc, store_image_xkz, store_tel, identy_no, telep_no, email, address, province_code, 
+    city_code, zone_code, company_name, legal_person, idcard_image_front, idcard_image_opposite, 
+    license_imgage, license_no, app_id, app_status, rmb_account, vb_account, longitude, 
+    latitude, credit_score, health_score, environment_score, service_score, management_state, 
+    available_account, frozen_account, create_time, update_time, del_status, average_price, 
+    or_sharing_time, or_their_own, minimum_time, refund_rate, refund_policy, recommended, 
+    features, introduction,discount
+  </sql>
+    <select id="selectByMemberId"  parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from cs_store
+        where member_id = #{memberId}
+    </select>
+    <select id="selectByLicenseNo"  parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from cs_store
+        where license_no = #{licenseNo} and app_status!=2
+    </select>
+
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from cs_store
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from cs_store
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+    <insert id="insert" parameterType="com.gbqd.pojo.goods.CsStore">
+    insert into cs_store (id, store_code, store_name, 
+      member_id, member_name, bu_p_id, 
+      bu_id, store_image_log, store_desc, 
+      store_image_xkz, store_tel, identy_no, 
+      telep_no, email, address, 
+      province_code, city_code, zone_code, 
+      company_name, legal_person, idcard_image_front, 
+      idcard_image_opposite, license_imgage, license_no, 
+      app_id, app_status, rmb_account, 
+      vb_account, longitude, latitude, 
+      credit_score, health_score, environment_score, 
+      service_score, management_state, available_account, 
+      frozen_account, create_time, update_time, 
+      del_status, average_price, or_sharing_time, 
+      or_their_own, minimum_time, refund_rate, 
+      refund_policy, recommended, features, 
+      introduction,discount)
+    values (#{id,jdbcType=BIGINT}, #{storeCode,jdbcType=VARCHAR}, #{storeName,jdbcType=VARCHAR}, 
+      #{memberId,jdbcType=VARCHAR}, #{memberName,jdbcType=VARCHAR}, #{buPId,jdbcType=BIGINT}, 
+      #{buId,jdbcType=BIGINT}, #{storeImageLog,jdbcType=VARCHAR}, #{storeDesc,jdbcType=VARCHAR}, 
+      #{storeImageXkz,jdbcType=VARCHAR}, #{storeTel,jdbcType=VARCHAR}, #{identyNo,jdbcType=VARCHAR}, 
+      #{telepNo,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{provinceCode,jdbcType=VARCHAR}, #{cityCode,jdbcType=VARCHAR}, #{zoneCode,jdbcType=VARCHAR}, 
+      #{companyName,jdbcType=VARCHAR}, #{legalPerson,jdbcType=VARCHAR}, #{idcardImageFront,jdbcType=VARCHAR}, 
+      #{idcardImageOpposite,jdbcType=VARCHAR}, #{licenseImgage,jdbcType=VARCHAR}, #{licenseNo,jdbcType=VARCHAR}, 
+      #{appId,jdbcType=BIGINT}, #{appStatus,jdbcType=INTEGER}, #{rmbAccount,jdbcType=DOUBLE}, 
+      #{vbAccount,jdbcType=DOUBLE}, #{longitude,jdbcType=VARCHAR}, #{latitude,jdbcType=VARCHAR}, 
+      #{creditScore,jdbcType=DOUBLE}, #{healthScore,jdbcType=DOUBLE}, #{environmentScore,jdbcType=DOUBLE}, 
+      #{serviceScore,jdbcType=DOUBLE}, #{managementState,jdbcType=INTEGER}, #{availableAccount,jdbcType=DOUBLE}, 
+      #{frozenAccount,jdbcType=DOUBLE}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{delStatus,jdbcType=INTEGER}, #{averagePrice,jdbcType=INTEGER}, #{orSharingTime,jdbcType=INTEGER}, 
+      #{orTheirOwn,jdbcType=INTEGER}, #{minimumTime,jdbcType=DOUBLE}, #{refundRate,jdbcType=DOUBLE}, 
+      #{refundPolicy,jdbcType=VARCHAR}, #{recommended,jdbcType=VARCHAR}, #{features,jdbcType=VARCHAR}, 
+      #{introduction,jdbcType=VARCHAR},#{discount,jdbcType=DOUBLE})
+  </insert>
+    <insert id="insertSelective" parameterType="com.gbqd.pojo.goods.CsStore">
+        insert into cs_store
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="storeCode != null">
+                store_code,
+            </if>
+            <if test="storeName != null">
+                store_name,
+            </if>
+            <if test="memberId != null">
+                member_id,
+            </if>
+            <if test="memberName != null">
+                member_name,
+            </if>
+            <if test="buPId != null">
+                bu_p_id,
+            </if>
+            <if test="buId != null">
+                bu_id,
+            </if>
+            <if test="storeImageLog != null">
+                store_image_log,
+            </if>
+            <if test="storeDesc != null">
+                store_desc,
+            </if>
+            <if test="storeImageXkz != null">
+                store_image_xkz,
+            </if>
+            <if test="storeTel != null">
+                store_tel,
+            </if>
+            <if test="identyNo != null">
+                identy_no,
+            </if>
+            <if test="telepNo != null">
+                telep_no,
+            </if>
+            <if test="email != null">
+                email,
+            </if>
+            <if test="address != null">
+                address,
+            </if>
+            <if test="provinceCode != null">
+                province_code,
+            </if>
+            <if test="cityCode != null">
+                city_code,
+            </if>
+            <if test="zoneCode != null">
+                zone_code,
+            </if>
+            <if test="companyName != null">
+                company_name,
+            </if>
+            <if test="legalPerson != null">
+                legal_person,
+            </if>
+            <if test="idcardImageFront != null">
+                idcard_image_front,
+            </if>
+            <if test="idcardImageOpposite != null">
+                idcard_image_opposite,
+            </if>
+            <if test="licenseImgage != null">
+                license_imgage,
+            </if>
+            <if test="licenseNo != null">
+                license_no,
+            </if>
+            <if test="appId != null">
+                app_id,
+            </if>
+            <if test="appStatus != null">
+                app_status,
+            </if>
+            <if test="rmbAccount != null">
+                rmb_account,
+            </if>
+            <if test="vbAccount != null">
+                vb_account,
+            </if>
+            <if test="longitude != null">
+                longitude,
+            </if>
+            <if test="latitude != null">
+                latitude,
+            </if>
+            <if test="creditScore != null">
+                credit_score,
+            </if>
+            <if test="healthScore != null">
+                health_score,
+            </if>
+            <if test="environmentScore != null">
+                environment_score,
+            </if>
+            <if test="serviceScore != null">
+                service_score,
+            </if>
+            <if test="managementState != null">
+                management_state,
+            </if>
+            <if test="availableAccount != null">
+                available_account,
+            </if>
+            <if test="frozenAccount != null">
+                frozen_account,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+            <if test="delStatus != null">
+                del_status,
+            </if>
+            <if test="averagePrice != null">
+                average_price,
+            </if>
+            <if test="orSharingTime != null">
+                or_sharing_time,
+            </if>
+            <if test="orTheirOwn != null">
+                or_their_own,
+            </if>
+            <if test="minimumTime != null">
+                minimum_time,
+            </if>
+            <if test="refundRate != null">
+                refund_rate,
+            </if>
+            <if test="refundPolicy != null">
+                refund_policy,
+            </if>
+            <if test="recommended != null">
+                recommended,
+            </if>
+            <if test="features != null">
+                features,
+            </if>
+            <if test="introduction != null">
+                introduction,
+            </if>
+            <if test="discount != null">
+                discount,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="storeCode != null">
+                #{storeCode,jdbcType=VARCHAR},
+            </if>
+            <if test="storeName != null">
+                #{storeName,jdbcType=VARCHAR},
+            </if>
+            <if test="memberId != null">
+                #{memberId,jdbcType=VARCHAR},
+            </if>
+            <if test="memberName != null">
+                #{memberName,jdbcType=VARCHAR},
+            </if>
+            <if test="buPId != null">
+                #{buPId,jdbcType=BIGINT},
+            </if>
+            <if test="buId != null">
+                #{buId,jdbcType=BIGINT},
+            </if>
+            <if test="storeImageLog != null">
+                #{storeImageLog,jdbcType=VARCHAR},
+            </if>
+            <if test="storeDesc != null">
+                #{storeDesc,jdbcType=VARCHAR},
+            </if>
+            <if test="storeImageXkz != null">
+                #{storeImageXkz,jdbcType=VARCHAR},
+            </if>
+            <if test="storeTel != null">
+                #{storeTel,jdbcType=VARCHAR},
+            </if>
+            <if test="identyNo != null">
+                #{identyNo,jdbcType=VARCHAR},
+            </if>
+            <if test="telepNo != null">
+                #{telepNo,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null">
+                #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="address != null">
+                #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="provinceCode != null">
+                #{provinceCode,jdbcType=VARCHAR},
+            </if>
+            <if test="cityCode != null">
+                #{cityCode,jdbcType=VARCHAR},
+            </if>
+            <if test="zoneCode != null">
+                #{zoneCode,jdbcType=VARCHAR},
+            </if>
+            <if test="companyName != null">
+                #{companyName,jdbcType=VARCHAR},
+            </if>
+            <if test="legalPerson != null">
+                #{legalPerson,jdbcType=VARCHAR},
+            </if>
+            <if test="idcardImageFront != null">
+                #{idcardImageFront,jdbcType=VARCHAR},
+            </if>
+            <if test="idcardImageOpposite != null">
+                #{idcardImageOpposite,jdbcType=VARCHAR},
+            </if>
+            <if test="licenseImgage != null">
+                #{licenseImgage,jdbcType=VARCHAR},
+            </if>
+            <if test="licenseNo != null">
+                #{licenseNo,jdbcType=VARCHAR},
+            </if>
+            <if test="appId != null">
+                #{appId,jdbcType=BIGINT},
+            </if>
+            <if test="appStatus != null">
+                #{appStatus,jdbcType=INTEGER},
+            </if>
+            <if test="rmbAccount != null">
+                #{rmbAccount,jdbcType=DOUBLE},
+            </if>
+            <if test="vbAccount != null">
+                #{vbAccount,jdbcType=DOUBLE},
+            </if>
+            <if test="longitude != null">
+                #{longitude,jdbcType=VARCHAR},
+            </if>
+            <if test="latitude != null">
+                #{latitude,jdbcType=VARCHAR},
+            </if>
+            <if test="creditScore != null">
+                #{creditScore,jdbcType=DOUBLE},
+            </if>
+            <if test="healthScore != null">
+                #{healthScore,jdbcType=DOUBLE},
+            </if>
+            <if test="environmentScore != null">
+                #{environmentScore,jdbcType=DOUBLE},
+            </if>
+            <if test="serviceScore != null">
+                #{serviceScore,jdbcType=DOUBLE},
+            </if>
+            <if test="managementState != null">
+                #{managementState,jdbcType=INTEGER},
+            </if>
+            <if test="availableAccount != null">
+                #{availableAccount,jdbcType=DOUBLE},
+            </if>
+            <if test="frozenAccount != null">
+                #{frozenAccount,jdbcType=DOUBLE},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="delStatus != null">
+                #{delStatus,jdbcType=INTEGER},
+            </if>
+            <if test="averagePrice != null">
+                #{averagePrice,jdbcType=INTEGER},
+            </if>
+            <if test="orSharingTime != null">
+                #{orSharingTime,jdbcType=INTEGER},
+            </if>
+            <if test="orTheirOwn != null">
+                #{orTheirOwn,jdbcType=INTEGER},
+            </if>
+            <if test="minimumTime != null">
+                #{minimumTime,jdbcType=DOUBLE},
+            </if>
+            <if test="refundRate != null">
+                #{refundRate,jdbcType=DOUBLE},
+            </if>
+            <if test="refundPolicy != null">
+                #{refundPolicy,jdbcType=VARCHAR},
+            </if>
+            <if test="recommended != null">
+                #{recommended,jdbcType=VARCHAR},
+            </if>
+            <if test="features != null">
+                #{features,jdbcType=VARCHAR},
+            </if>
+            <if test="introduction != null">
+                #{introduction,jdbcType=VARCHAR},
+            </if>discount
+            <if test="discount != null">
+                #{discount,jdbcType=DOUBLE},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.gbqd.pojo.goods.CsStore">
+        update cs_store
+        <set>
+            <if test="storeCode != null">
+                store_code = #{storeCode,jdbcType=VARCHAR},
+            </if>
+            <if test="storeName != null">
+                store_name = #{storeName,jdbcType=VARCHAR},
+            </if>
+            <if test="memberId != null">
+                member_id = #{memberId,jdbcType=VARCHAR},
+            </if>
+            <if test="memberName != null">
+                member_name = #{memberName,jdbcType=VARCHAR},
+            </if>
+            <if test="buPId != null">
+                bu_p_id = #{buPId,jdbcType=BIGINT},
+            </if>
+            <if test="buId != null">
+                bu_id = #{buId,jdbcType=BIGINT},
+            </if>
+            <if test="storeImageLog != null">
+                store_image_log = #{storeImageLog,jdbcType=VARCHAR},
+            </if>
+            <if test="storeDesc != null">
+                store_desc = #{storeDesc,jdbcType=VARCHAR},
+            </if>
+            <if test="storeImageXkz != null">
+                store_image_xkz = #{storeImageXkz,jdbcType=VARCHAR},
+            </if>
+            <if test="storeTel != null">
+                store_tel = #{storeTel,jdbcType=VARCHAR},
+            </if>
+            <if test="identyNo != null">
+                identy_no = #{identyNo,jdbcType=VARCHAR},
+            </if>
+            <if test="telepNo != null">
+                telep_no = #{telepNo,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null">
+                email = #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="address != null">
+                address = #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="provinceCode != null">
+                province_code = #{provinceCode,jdbcType=VARCHAR},
+            </if>
+            <if test="cityCode != null">
+                city_code = #{cityCode,jdbcType=VARCHAR},
+            </if>
+            <if test="zoneCode != null">
+                zone_code = #{zoneCode,jdbcType=VARCHAR},
+            </if>
+            <if test="companyName != null">
+                company_name = #{companyName,jdbcType=VARCHAR},
+            </if>
+            <if test="legalPerson != null">
+                legal_person = #{legalPerson,jdbcType=VARCHAR},
+            </if>
+            <if test="idcardImageFront != null">
+                idcard_image_front = #{idcardImageFront,jdbcType=VARCHAR},
+            </if>
+            <if test="idcardImageOpposite != null">
+                idcard_image_opposite = #{idcardImageOpposite,jdbcType=VARCHAR},
+            </if>
+            <if test="licenseImgage != null">
+                license_imgage = #{licenseImgage,jdbcType=VARCHAR},
+            </if>
+            <if test="licenseNo != null">
+                license_no = #{licenseNo,jdbcType=VARCHAR},
+            </if>
+            <if test="appId != null">
+                app_id = #{appId,jdbcType=BIGINT},
+            </if>
+            <if test="appStatus != null">
+                app_status = #{appStatus,jdbcType=INTEGER},
+            </if>
+            <if test="rmbAccount != null">
+                rmb_account = #{rmbAccount,jdbcType=DOUBLE},
+            </if>
+            <if test="vbAccount != null">
+                vb_account = #{vbAccount,jdbcType=DOUBLE},
+            </if>
+            <if test="longitude != null">
+                longitude = #{longitude,jdbcType=VARCHAR},
+            </if>
+            <if test="latitude != null">
+                latitude = #{latitude,jdbcType=VARCHAR},
+            </if>
+            <if test="creditScore != null">
+                credit_score = #{creditScore,jdbcType=DOUBLE},
+            </if>
+            <if test="healthScore != null">
+                health_score = #{healthScore,jdbcType=DOUBLE},
+            </if>
+            <if test="environmentScore != null">
+                environment_score = #{environmentScore,jdbcType=DOUBLE},
+            </if>
+            <if test="serviceScore != null">
+                service_score = #{serviceScore,jdbcType=DOUBLE},
+            </if>
+            <if test="managementState != null">
+                management_state = #{managementState,jdbcType=INTEGER},
+            </if>
+            <if test="availableAccount != null">
+                available_account = #{availableAccount,jdbcType=DOUBLE},
+            </if>
+            <if test="frozenAccount != null">
+                frozen_account = #{frozenAccount,jdbcType=DOUBLE},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="delStatus != null">
+                del_status = #{delStatus,jdbcType=INTEGER},
+            </if>
+            <if test="averagePrice != null">
+                average_price = #{averagePrice,jdbcType=INTEGER},
+            </if>
+            <if test="orSharingTime != null">
+                or_sharing_time = #{orSharingTime,jdbcType=INTEGER},
+            </if>
+            <if test="orTheirOwn != null">
+                or_their_own = #{orTheirOwn,jdbcType=INTEGER},
+            </if>
+            <if test="minimumTime != null">
+                minimum_time = #{minimumTime,jdbcType=DOUBLE},
+            </if>
+            <if test="refundRate != null">
+                refund_rate = #{refundRate,jdbcType=DOUBLE},
+            </if>
+            <if test="refundPolicy != null">
+                refund_policy = #{refundPolicy,jdbcType=VARCHAR},
+            </if>
+            <if test="recommended != null">
+                recommended = #{recommended,jdbcType=VARCHAR},
+            </if>
+            <if test="features != null">
+                features = #{features,jdbcType=VARCHAR},
+            </if>
+            <if test="introduction != null">
+                introduction = #{introduction,jdbcType=VARCHAR},
+            </if>
+            <if test="discount != null">
+                discount = #{discount,jdbcType=DOUBLE},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.gbqd.pojo.goods.CsStore">
+    update cs_store
+    set store_code = #{storeCode,jdbcType=VARCHAR},
+      store_name = #{storeName,jdbcType=VARCHAR},
+      member_id = #{memberId,jdbcType=VARCHAR},
+      member_name = #{memberName,jdbcType=VARCHAR},
+      bu_p_id = #{buPId,jdbcType=BIGINT},
+      bu_id = #{buId,jdbcType=BIGINT},
+      store_image_log = #{storeImageLog,jdbcType=VARCHAR},
+      store_desc = #{storeDesc,jdbcType=VARCHAR},
+      store_image_xkz = #{storeImageXkz,jdbcType=VARCHAR},
+      store_tel = #{storeTel,jdbcType=VARCHAR},
+      identy_no = #{identyNo,jdbcType=VARCHAR},
+      telep_no = #{telepNo,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      province_code = #{provinceCode,jdbcType=VARCHAR},
+      city_code = #{cityCode,jdbcType=VARCHAR},
+      zone_code = #{zoneCode,jdbcType=VARCHAR},
+      company_name = #{companyName,jdbcType=VARCHAR},
+      legal_person = #{legalPerson,jdbcType=VARCHAR},
+      idcard_image_front = #{idcardImageFront,jdbcType=VARCHAR},
+      idcard_image_opposite = #{idcardImageOpposite,jdbcType=VARCHAR},
+      license_imgage = #{licenseImgage,jdbcType=VARCHAR},
+      license_no = #{licenseNo,jdbcType=VARCHAR},
+      app_id = #{appId,jdbcType=BIGINT},
+      app_status = #{appStatus,jdbcType=INTEGER},
+      rmb_account = #{rmbAccount,jdbcType=DOUBLE},
+      vb_account = #{vbAccount,jdbcType=DOUBLE},
+      longitude = #{longitude,jdbcType=VARCHAR},
+      latitude = #{latitude,jdbcType=VARCHAR},
+      credit_score = #{creditScore,jdbcType=DOUBLE},
+      health_score = #{healthScore,jdbcType=DOUBLE},
+      environment_score = #{environmentScore,jdbcType=DOUBLE},
+      service_score = #{serviceScore,jdbcType=DOUBLE},
+      management_state = #{managementState,jdbcType=INTEGER},
+      available_account = #{availableAccount,jdbcType=DOUBLE},
+      frozen_account = #{frozenAccount,jdbcType=DOUBLE},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      del_status = #{delStatus,jdbcType=INTEGER},
+      average_price = #{averagePrice,jdbcType=INTEGER},
+      or_sharing_time = #{orSharingTime,jdbcType=INTEGER},
+      or_their_own = #{orTheirOwn,jdbcType=INTEGER},
+      minimum_time = #{minimumTime,jdbcType=DOUBLE},
+      refund_rate = #{refundRate,jdbcType=DOUBLE},
+      refund_policy = #{refundPolicy,jdbcType=VARCHAR},
+      recommended = #{recommended,jdbcType=VARCHAR},
+      features = #{features,jdbcType=VARCHAR},
+      introduction = #{introduction,jdbcType=VARCHAR},  discount = #{discount,jdbcType=DOUBLE}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+
+    <select id="selectByStoreKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+   SELECT
+	  a.id, a.store_code, a.store_name, a.member_id, a.member_name, a.bu_p_id, a.bu_id, a.store_image_log,
+    a.store_desc, a.store_image_xkz, a.store_tel, a.identy_no, a.telep_no, a.email, a.address, a.province_code,
+    a.city_code, a.zone_code, a.company_name, a.legal_person, a.idcard_image_front, a.idcard_image_opposite,
+    a.license_imgage, a.license_no, a.app_id, a.app_status, a.rmb_account, a.vb_account, a.longitude,
+    a.latitude, a.credit_score, a.health_score, a.environment_score, a.service_score, a.management_state,
+    a.available_account, a.frozen_account, a.create_time, a.update_time, a.del_status, a.average_price,
+    a.or_sharing_time, a.or_their_own, a.minimum_time, a.refund_rate, a.refund_policy, a.recommended,
+    a.features, a.introduction, b.bu_name  as fnamen,c.bu_name as tname,a.discount
+FROM
+	cs_store a
+LEFT JOIN cs_business_hierarchy b ON a.bu_p_id = b.id
+LEFT JOIN cs_business_hierarchy c ON a.bu_id = c.id
+WHERE
+    a.id = #{id,jdbcType=BIGINT}
+  </select>
+
+</mapper>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gbqd.mapper.CsGoodsHotelImageMapper">
+  <resultMap id="BaseResultMap" type="com.gbqd.pojo.goods.CsGoodsHotelImage">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="room_id" jdbcType="BIGINT" property="roomId" />
+    <result column="group_id" jdbcType="BIGINT" property="groupId" />
+    <result column="image_url" jdbcType="VARCHAR" property="imageUrl" />
+    <result column="image_title" jdbcType="VARCHAR" property="imageTitle" />
+    <result column="image_desc" jdbcType="VARCHAR" property="imageDesc" />
+    <result column="create_member_id" jdbcType="VARCHAR" property="createMemberId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, room_id, group_id, image_url, image_title, image_desc, create_member_id, create_time
+  </sql>
+  <select id="selectRoomList" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from cs_goods_hotel_image
+    where room_id = #{roomId,jdbcType=BIGINT}
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cs_goods_hotel_image
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from cs_goods_hotel_image
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.gbqd.pojo.goods.CsGoodsHotelImage">
+    insert into cs_goods_hotel_image (id, room_id, group_id, 
+      image_url, image_title, image_desc, 
+      create_member_id, create_time)
+    values (#{id,jdbcType=BIGINT}, #{roomId,jdbcType=BIGINT}, #{groupId,jdbcType=BIGINT}, 
+      #{imageUrl,jdbcType=VARCHAR}, #{imageTitle,jdbcType=VARCHAR}, #{imageDesc,jdbcType=VARCHAR}, 
+      #{createMemberId,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gbqd.pojo.goods.CsGoodsHotelImage">
+    insert into cs_goods_hotel_image
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="roomId != null">
+        room_id,
+      </if>
+      <if test="groupId != null">
+        group_id,
+      </if>
+      <if test="imageUrl != null">
+        image_url,
+      </if>
+      <if test="imageTitle != null">
+        image_title,
+      </if>
+      <if test="imageDesc != null">
+        image_desc,
+      </if>
+      <if test="createMemberId != null">
+        create_member_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="roomId != null">
+        #{roomId,jdbcType=BIGINT},
+      </if>
+      <if test="groupId != null">
+        #{groupId,jdbcType=BIGINT},
+      </if>
+      <if test="imageUrl != null">
+        #{imageUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="imageTitle != null">
+        #{imageTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="imageDesc != null">
+        #{imageDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="createMemberId != null">
+        #{createMemberId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gbqd.pojo.goods.CsGoodsHotelImage">
+    update cs_goods_hotel_image
+    <set>
+      <if test="roomId != null">
+        room_id = #{roomId,jdbcType=BIGINT},
+      </if>
+      <if test="groupId != null">
+        group_id = #{groupId,jdbcType=BIGINT},
+      </if>
+      <if test="imageUrl != null">
+        image_url = #{imageUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="imageTitle != null">
+        image_title = #{imageTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="imageDesc != null">
+        image_desc = #{imageDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="createMemberId != null">
+        create_member_id = #{createMemberId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gbqd.pojo.goods.CsGoodsHotelImage">
+    update cs_goods_hotel_image
+    set room_id = #{roomId,jdbcType=BIGINT},
+      group_id = #{groupId,jdbcType=BIGINT},
+      image_url = #{imageUrl,jdbcType=VARCHAR},
+      image_title = #{imageTitle,jdbcType=VARCHAR},
+      image_desc = #{imageDesc,jdbcType=VARCHAR},
+      create_member_id = #{createMemberId,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

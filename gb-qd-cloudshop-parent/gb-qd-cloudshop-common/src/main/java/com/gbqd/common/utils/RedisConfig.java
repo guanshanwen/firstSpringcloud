@@ -30,8 +30,11 @@ public class RedisConfig extends CachingConfigurerSupport {
     private String host;
     @Value("${spring.redis.port}")
     private int port;
+    @Value("${spring.redis.password}")
+    private String password;
     @Value("${spring.redis.timeout}")
     private int timeout;
+
     /**
      * 生产key的策略
      *
@@ -84,6 +87,7 @@ public class RedisConfig extends CachingConfigurerSupport {
         JedisConnectionFactory factory = new JedisConnectionFactory();
         factory.setHostName(host);
         factory.setPort(port);
+        factory.setPassword(password);
         factory.setTimeout(timeout); // 设置连接超时时间
         return factory;
     }

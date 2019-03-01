@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gbqd.mapper.CsTemplateItemMapper">
+  <resultMap id="BaseResultMap" type="com.gbqd.pojo.template.CsTemplateItem">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="tem_id" jdbcType="BIGINT" property="temId" />
+    <result column="item_code" jdbcType="VARCHAR" property="itemCode" />
+    <result column="item_display" jdbcType="VARCHAR" property="itemDisplay" />
+    <result column="text_type" jdbcType="INTEGER" property="textType" />
+    <result column="text_length" jdbcType="INTEGER" property="textLength" />
+    <result column="text_can_empt" jdbcType="INTEGER" property="textCanEmpt" />
+    <result column="select_num" jdbcType="INTEGER" property="selectNum" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="del_status" jdbcType="INTEGER" property="delStatus" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, tem_id, item_code, item_display, text_type, text_length, text_can_empt, select_num, sort,
+    del_status, create_time
+  </sql>
+  <select id="getCsTemplateItemByStoreIdAndTemType" resultType="com.gbqd.pojo.template.CsTemplateItem">
+        select temi.id, temi.tem_id as temId, temi.item_code as itemCode, temi.item_display as itemDisplay, temi.text_type as textType, temi.text_length as textLength,
+        temi.text_can_empt as textCanEmpt, temi.select_num as selectNum,temi.del_status as delStatus, temi.create_time as createTime,ite.item_name as itemName,ite.scope_value as scopeValue,
+        temi.sort
+        from cs_business_template_relation btr
+        INNER JOIN cs_template tem on tem.id=btr.tem_id
+        INNER JOIN cs_template_item temi on tem.id = temi.tem_id
+        INNER JOIN cs_item ite on ite.item_code = temi.item_code
+        where btr.bu_id=#{buId,jdbcType=BIGINT} and tem.tem_type=#{temType,jdbcType=INTEGER}
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cs_template_item
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from cs_template_item
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.gbqd.pojo.template.CsTemplateItem">
+    insert into cs_template_item (id, tem_id, item_code, 
+      item_display, text_type, text_length, 
+      text_can_empt, select_num, del_status,sort,
+      create_time)
+    values (#{id,jdbcType=BIGINT}, #{temId,jdbcType=BIGINT}, #{itemCode,jdbcType=VARCHAR}, 
+      #{itemDisplay,jdbcType=VARCHAR}, #{textType,jdbcType=INTEGER}, #{textLength,jdbcType=INTEGER}, 
+      #{textCanEmpt,jdbcType=INTEGER}, #{selectNum,jdbcType=INTEGER},  #{sort,jdbcType=INTEGER}, #{delStatus,jdbcType=INTEGER},
+      #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gbqd.pojo.template.CsTemplateItem">
+    insert into cs_template_item
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="temId != null">
+        tem_id,
+      </if>
+      <if test="itemCode != null">
+        item_code,
+      </if>
+      <if test="itemDisplay != null">
+        item_display,
+      </if>
+      <if test="textType != null">
+        text_type,
+      </if>
+      <if test="textLength != null">
+        text_length,
+      </if>
+      <if test="textCanEmpt != null">
+        text_can_empt,
+      </if>
+      <if test="selectNum != null">
+        select_num,
+      </if>
+      <if test="sort != null">
+        sort,
+      </if>
+      <if test="delStatus != null">
+        del_status,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="temId != null">
+        #{temId,jdbcType=BIGINT},
+      </if>
+      <if test="itemCode != null">
+        #{itemCode,jdbcType=VARCHAR},
+      </if>
+      <if test="itemDisplay != null">
+        #{itemDisplay,jdbcType=VARCHAR},
+      </if>
+      <if test="textType != null">
+        #{textType,jdbcType=INTEGER},
+      </if>
+      <if test="textLength != null">
+        #{textLength,jdbcType=INTEGER},
+      </if>
+      <if test="textCanEmpt != null">
+        #{textCanEmpt,jdbcType=INTEGER},
+      </if>
+      <if test="selectNum != null">
+        #{selectNum,jdbcType=INTEGER},
+      </if>
+      <if test="sort != null">
+        #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="delStatus != null">
+        #{delStatus,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gbqd.pojo.template.CsTemplateItem">
+    update cs_template_item
+    <set>
+      <if test="temId != null">
+        tem_id = #{temId,jdbcType=BIGINT},
+      </if>
+      <if test="itemCode != null">
+        item_code = #{itemCode,jdbcType=VARCHAR},
+      </if>
+      <if test="itemDisplay != null">
+        item_display = #{itemDisplay,jdbcType=VARCHAR},
+      </if>
+      <if test="textType != null">
+        text_type = #{textType,jdbcType=INTEGER},
+      </if>
+      <if test="textLength != null">
+        text_length = #{textLength,jdbcType=INTEGER},
+      </if>
+      <if test="textCanEmpt != null">
+        text_can_empt = #{textCanEmpt,jdbcType=INTEGER},
+      </if>
+      <if test="selectNum != null">
+        select_num = #{selectNum,jdbcType=INTEGER},
+      </if>
+      <if test="sort != null">
+        sort = #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="delStatus != null">
+        del_status = #{delStatus,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gbqd.pojo.template.CsTemplateItem">
+    update cs_template_item
+    set tem_id = #{temId,jdbcType=BIGINT},
+      item_code = #{itemCode,jdbcType=VARCHAR},
+      item_display = #{itemDisplay,jdbcType=VARCHAR},
+      text_type = #{textType,jdbcType=INTEGER},
+      text_length = #{textLength,jdbcType=INTEGER},
+      text_can_empt = #{textCanEmpt,jdbcType=INTEGER},
+      select_num = #{selectNum,jdbcType=INTEGER},
+      sort = #{sort,jdbcType=INTEGER},
+      del_status = #{delStatus,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

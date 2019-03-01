@@ -1,10 +1,9 @@
 package com.gbqd.service.order.hystrix;
 
-import com.gbqd.pojo.CsMember;
+import com.gbqd.common.utils.ResultCode;
+import com.gbqd.pojo.member.CsMember;
 import com.gbqd.service.order.feign.MemberServiceFeign;
-import com.github.pagehelper.PageInfo;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author MrWen
@@ -13,54 +12,24 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Component
 public class MemberServiceHystrix implements MemberServiceFeign {
 
-    public void insert(@RequestParam(value = "member", required = false) CsMember member) {
-
-    }
-
-    ;
-
-
-    public void update(@RequestParam(value = "member", required = false) CsMember member) {
-
-    }
-
-    ;
-
-
-    public CsMember find(@RequestParam(value = "id", required = false) int id) {
-        return null;
-    }
 
     @Override
-    public void delete(int id) {
-
-    }
-
-    ;
-
-
-    public void delete(@RequestParam(value = "id", required = false) String id) {
-
-    }
-
-
-    public PageInfo<CsMember> findList(@RequestParam("PageNum") int PageNum,@RequestParam("pageSize") int pageSize) {
+    public CsMember getMember(String memberId) {
         return null;
     }
-
-    ;
 
     /**
-     * @param name
-     * @param age
-     * @@describe: 服务降级
-     * @author: MrWen
-     * @return: java.lang.String
-     * @date: 2019/1/15 14:45
+     * 登陆接口
+     *
+     * @param loginAccount 用户id
+     * @param password     密码
+     * @param authCode     邀请码
+     * @return
      */
     @Override
-    public String gerMember(String name, String age) {
-
-        return "member接口熔断";
+    public ResultCode<CsMember> login(String loginAccount, String password, String authCode) {
+        return null;
     }
+
+
 }

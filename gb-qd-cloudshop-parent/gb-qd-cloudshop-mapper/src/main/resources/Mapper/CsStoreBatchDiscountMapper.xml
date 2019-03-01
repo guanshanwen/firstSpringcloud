@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gbqd.mapper.CsStoreBatchDiscountMapper">
+  <resultMap id="BaseResultMap" type="com.gbqd.pojo.goods.CsStoreBatchDiscount">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="store_id" jdbcType="BIGINT" property="storeId" />
+    <result column="begin_time" jdbcType="TIMESTAMP" property="beginTime" />
+    <result column="end_time" jdbcType="TIMESTAMP" property="endTime" />
+    <result column="rate" jdbcType="DOUBLE" property="rate" />
+    <result column="member_id" jdbcType="VARCHAR" property="memberId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, store_id, begin_time, end_time, rate, member_id, create_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cs_store_batch_discount
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from cs_store_batch_discount
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="batchDiscountdel" parameterType="Long[]" >
+    delete from cs_store_batch_discount
+    where id in
+    <foreach collection="array" item="id" open="(" separator="," close=")">
+        #{id,jdbcType=BIGINT}
+    </foreach>
+  </delete>
+
+  <insert id="insert" parameterType="com.gbqd.pojo.goods.CsStoreBatchDiscount">
+    insert into cs_store_batch_discount (id, store_id, begin_time, 
+      end_time, rate, member_id, 
+      create_time)
+    values (#{id,jdbcType=BIGINT}, #{storeId,jdbcType=BIGINT}, #{beginTime,jdbcType=TIMESTAMP}, 
+      #{endTime,jdbcType=TIMESTAMP}, #{rate,jdbcType=DOUBLE}, #{memberId,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gbqd.pojo.goods.CsStoreBatchDiscount">
+    insert into cs_store_batch_discount
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="storeId != null">
+        store_id,
+      </if>
+      <if test="beginTime != null">
+        begin_time,
+      </if>
+      <if test="endTime != null">
+        end_time,
+      </if>
+      <if test="rate != null">
+        rate,
+      </if>
+      <if test="memberId != null">
+        member_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="storeId != null">
+        #{storeId,jdbcType=BIGINT},
+      </if>
+      <if test="beginTime != null">
+        #{beginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null">
+        #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="rate != null">
+        #{rate,jdbcType=DOUBLE},
+      </if>
+      <if test="memberId != null">
+        #{memberId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gbqd.pojo.goods.CsStoreBatchDiscount">
+    update cs_store_batch_discount
+    <set>
+      <if test="storeId != null">
+        store_id = #{storeId,jdbcType=BIGINT},
+      </if>
+      <if test="beginTime != null">
+        begin_time = #{beginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null">
+        end_time = #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="rate != null">
+        rate = #{rate,jdbcType=DOUBLE},
+      </if>
+      <if test="memberId != null">
+        member_id = #{memberId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gbqd.pojo.goods.CsStoreBatchDiscount">
+    update cs_store_batch_discount
+    set store_id = #{storeId,jdbcType=BIGINT},
+      begin_time = #{beginTime,jdbcType=TIMESTAMP},
+      end_time = #{endTime,jdbcType=TIMESTAMP},
+      rate = #{rate,jdbcType=DOUBLE},
+      member_id = #{memberId,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectDiscountListByStoreId" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List" /> from cs_store_batch_discount
+    where 1=1
+    <if test="storeId != null">
+      and store_id = #{storeId,jdbcType=BIGINT}
+    </if>
+    <if test="beginTime !=null and endTime!=null">
+      <![CDATA[ and  begin_time >= #{beginTime,jdbcType=TIMESTAMP} and  DATE_FORMAT(end_time, '%Y-%m-%d')<=#{endTime,jdbcType=TIMESTAMP} ]]>
+    </if>
+  </select>
+</mapper>

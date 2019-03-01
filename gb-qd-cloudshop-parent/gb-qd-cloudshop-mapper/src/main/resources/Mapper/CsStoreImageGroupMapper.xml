@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gbqd.mapper.CsStoreImageGroupMapper">
+  <resultMap id="BaseResultMap" type="com.gbqd.pojo.goods.CsStoreImageGroup">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="store_id" jdbcType="BIGINT" property="storeId" />
+    <result column="group_name" jdbcType="VARCHAR" property="groupName" />
+    <result column="group_title" jdbcType="VARCHAR" property="groupTitle" />
+    <result column="group_desc" jdbcType="VARCHAR" property="groupDesc" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="create_member_id" jdbcType="VARCHAR" property="createMemberId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, store_id, group_name, group_title, group_desc, sort, create_member_id, create_time
+  </sql>
+
+  <select id="getCsStoreImageGroupDelete" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from cs_store_image_group
+    WHERE
+    store_id = #{storeId,jdbcType=BIGINT} and  sort<![CDATA[ > ]]>#{sort,jdbcType=INTEGER}
+    ORDER BY
+    sort DESC
+  </select>
+
+  <select id="getCsStoreImageGroupDown" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from cs_store_image_group
+    WHERE
+    store_id = #{storeId,jdbcType=BIGINT} and  sort<![CDATA[ >= ]]>#{sort,jdbcType=INTEGER}  and sort<![CDATA[ < ]]>#{nowStort,jdbcType=INTEGER}
+    ORDER BY
+    sort DESC
+  </select>
+  <select id="getCsStoreImageGroupUp" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from cs_store_image_group
+    WHERE
+    store_id = #{storeId,jdbcType=BIGINT} and  sort<![CDATA[ <= ]]>#{sort,jdbcType=INTEGER}  and sort<![CDATA[ > ]]>#{nowStort,jdbcType=INTEGER}
+    ORDER BY
+    sort DESC
+  </select>
+
+  <select id="getCsStoreImageGroupNo" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from cs_store_image_group
+    where store_id = #{storeId,jdbcType=BIGINT} and sort<![CDATA[ >= ]]>#{sort,jdbcType=INTEGER} and sort<![CDATA[ < ]]>#{nowStort,jdbcType=INTEGER} order by sort desc
+  </select>
+  <select id="getCsStoreImageGroupList" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from cs_store_image_group
+    where store_id = #{storeId,jdbcType=BIGINT} order by sort desc
+  </select>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cs_store_image_group
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from cs_store_image_group
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.gbqd.pojo.goods.CsStoreImageGroup">
+    insert into cs_store_image_group (id, store_id, group_name, 
+      group_title, group_desc, sort, 
+      create_member_id, create_time)
+    values (#{id,jdbcType=BIGINT}, #{storeId,jdbcType=BIGINT}, #{groupName,jdbcType=VARCHAR}, 
+      #{groupTitle,jdbcType=VARCHAR}, #{groupDesc,jdbcType=VARCHAR}, #{sort,jdbcType=INTEGER}, 
+      #{createMemberId,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gbqd.pojo.goods.CsStoreImageGroup">
+    insert into cs_store_image_group
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="storeId != null">
+        store_id,
+      </if>
+      <if test="groupName != null">
+        group_name,
+      </if>
+      <if test="groupTitle != null">
+        group_title,
+      </if>
+      <if test="groupDesc != null">
+        group_desc,
+      </if>
+      <if test="sort != null">
+        sort,
+      </if>
+      <if test="createMemberId != null">
+        create_member_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="storeId != null">
+        #{storeId,jdbcType=BIGINT},
+      </if>
+      <if test="groupName != null">
+        #{groupName,jdbcType=VARCHAR},
+      </if>
+      <if test="groupTitle != null">
+        #{groupTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="groupDesc != null">
+        #{groupDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="sort != null">
+        #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="createMemberId != null">
+        #{createMemberId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gbqd.pojo.goods.CsStoreImageGroup">
+    update cs_store_image_group
+    <set>
+      <if test="storeId != null">
+        store_id = #{storeId,jdbcType=BIGINT},
+      </if>
+      <if test="groupName != null">
+        group_name = #{groupName,jdbcType=VARCHAR},
+      </if>
+      <if test="groupTitle != null">
+        group_title = #{groupTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="groupDesc != null">
+        group_desc = #{groupDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="sort != null">
+        sort = #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="createMemberId != null">
+        create_member_id = #{createMemberId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gbqd.pojo.goods.CsStoreImageGroup">
+    update cs_store_image_group
+    set store_id = #{storeId,jdbcType=BIGINT},
+      group_name = #{groupName,jdbcType=VARCHAR},
+      group_title = #{groupTitle,jdbcType=VARCHAR},
+      group_desc = #{groupDesc,jdbcType=VARCHAR},
+      sort = #{sort,jdbcType=INTEGER},
+      create_member_id = #{createMemberId,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+
+  <update id="editSeq" parameterType="java.util.List">
+    <foreach collection="list" item="var" index="index" open="" close="" separator=";">
+      update t_params
+      <set>
+      sort= #{var.sort}
+      </set>
+      where id= #{var.id}
+    </foreach>
+  </update>
+</mapper>

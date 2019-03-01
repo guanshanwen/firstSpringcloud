@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gbqd.mapper.CsIncomeSpendingMapper">
+    <resultMap id="BaseResultMap" type="com.gbqd.pojo.goods.CsIncomeSpending">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="main_id" jdbcType="BIGINT" property="mainId"/>
+        <result column="sales" jdbcType="DOUBLE" property="sales"/>
+        <result column="vb_money" jdbcType="DOUBLE" property="vbMoney"/>
+        <result column="type" jdbcType="INTEGER" property="type"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="store_id" jdbcType="BIGINT" property="storeId"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, main_id, sales, vb_money, type, create_time, store_id
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from cs_income_spending
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from cs_income_spending
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+    <insert id="insert" parameterType="com.gbqd.pojo.goods.CsIncomeSpending">
+    insert into cs_income_spending (id, main_id, sales, 
+      vb_money, type, create_time, 
+      store_id)
+    values (#{id,jdbcType=BIGINT}, #{mainId,jdbcType=BIGINT}, #{sales,jdbcType=DOUBLE}, 
+      #{vbMoney,jdbcType=DOUBLE}, #{type,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{storeId,jdbcType=BIGINT})
+  </insert>
+    <insert id="insertSelective" parameterType="com.gbqd.pojo.goods.CsIncomeSpending">
+        insert into cs_income_spending
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="mainId != null">
+                main_id,
+            </if>
+            <if test="sales != null">
+                sales,
+            </if>
+            <if test="vbMoney != null">
+                vb_money,
+            </if>
+            <if test="type != null">
+                type,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="storeId != null">
+                store_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="mainId != null">
+                #{mainId,jdbcType=BIGINT},
+            </if>
+            <if test="sales != null">
+                #{sales,jdbcType=DOUBLE},
+            </if>
+            <if test="vbMoney != null">
+                #{vbMoney,jdbcType=DOUBLE},
+            </if>
+            <if test="type != null">
+                #{type,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="storeId != null">
+                #{storeId,jdbcType=BIGINT},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.gbqd.pojo.goods.CsIncomeSpending">
+        update cs_income_spending
+        <set>
+            <if test="mainId != null">
+                main_id = #{mainId,jdbcType=BIGINT},
+            </if>
+            <if test="sales != null">
+                sales = #{sales,jdbcType=DOUBLE},
+            </if>
+            <if test="vbMoney != null">
+                vb_money = #{vbMoney,jdbcType=DOUBLE},
+            </if>
+            <if test="type != null">
+                type = #{type,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="storeId != null">
+                store_id = #{storeId,jdbcType=BIGINT},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.gbqd.pojo.goods.CsIncomeSpending">
+    update cs_income_spending
+    set main_id = #{mainId,jdbcType=BIGINT},
+      sales = #{sales,jdbcType=DOUBLE},
+      vb_money = #{vbMoney,jdbcType=DOUBLE},
+      type = #{type,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      store_id = #{storeId,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+
+    <select id="selectTotal"  resultMap="BaseResultMap">
+         select SUM(sales) as totalSales,SUM(vb_money) as vbMoney, (SUM(sales)-SUM(vb_money)) as totalEarnings from
+        cs_income_spending where store_id=#{storeId}
+  </select>
+
+    <select id="selectTotalMonth" resultMap="BaseResultMap">
+        select SUM(sales) as sales,SUM(vb_money) as vbMoney, (SUM(sales)-SUM(vb_money)) as earnings from
+        cs_income_spending where store_id=#{storeId} and create_time like  CONCAT('%',#{dateMonth},'%')
+    </select>
+</mapper>

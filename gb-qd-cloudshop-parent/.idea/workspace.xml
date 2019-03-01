@@ -1,40 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="699a3432-0d72-4036-a02e-d8e1ed1d6d02" name="Default Changelist" comment="" />
-    <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-service-member/target/" />
-    <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-order-api/target/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-service-api/target/" />
-    <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-mapper/target/" />
-    <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-service-order/target/" />
-    <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-member-api/target/" />
-    <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-zuul/target/" />
+    <list default="true" id="4f34aece-d82a-4b13-a661-e682bb0dcda8" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-pojo/target/" />
+    <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-order-api/target/" />
+    <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-service-api/target/" />
     <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-common/target/" />
+    <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-mapper/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-member-api/target/" />
+    <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-service-member/target/" />
+    <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-zuul/target/" />
+    <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-service-order/target/" />
     <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-eureka/target/" />
+    <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-service-goods/target/" />
+    <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-service-storeGoods/target/" />
+    <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-goods-api/target/" />
+    <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-securityg/target/" />
+    <ignored path="$PROJECT_DIR$/gb-qd-cloudshop-service-front/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="cloudshop" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-eureka/src/main/resources/application.yml">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-goods/src/main/java/com/gbqd/service/goods/controller/GoodsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+            <state relative-caret-position="508">
+              <caret line="538" column="168" lean-forward="true" selection-start-line="538" selection-start-column="168" selection-end-line="538" selection-end-column="168" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/main/resources/application.yml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-goods/src/main/java/com/gbqd/service/goods/service/impl/GoodsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+            <state relative-caret-position="438">
+              <caret line="737" column="159" lean-forward="true" selection-start-line="728" selection-start-column="2" selection-end-line="737" selection-end-column="159" />
+              <folding>
+                <element signature="e#31396#31436#0" expanded="true" />
+                <element signature="e#32012#32042#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/java/com/gbqd/mapper/CsStoreHotelCategoryPriceSetMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-goods-api/src/main/java/com/gbqd/service/goods/GoodsService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="329" column="77" selection-start-line="329" selection-start-column="77" selection-end-line="329" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/GbQdCloudshopZuulApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/resources/Mapper/CsStoreHotelCategoryPriceSetMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-pojo/src/main/java/com/gbqd/pojo/goods/CsStoreHotelCategoryPriceSet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="41" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,21 +124,51 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>redisConn</find>
-      <find>redisTemplate</find>
-      <find>timeout</find>
-      <find>csMemberMapper</find>
-      <find>expire</find>
+      <find>stroeUpdate</find>
+      <find>Tom</find>
+      <find>insertImage</find>
+      <find>csStoreImageGroupMapper</find>
+      <find>getCsStoreImageGroupList</find>
+      <find>insertImageGroup</find>
+      <find>updateSort</find>
+      <find>editSeq</find>
+      <find>accessDecisionManager</find>
+      <find>HMS_FORMAT</find>
+      <find>insertStoreHolidaySettings</find>
+      <find>getCsStoreBusinessHoursList</find>
+      <find>QuartzScheduler</find>
+      <find>getJobInfo</find>
+      <find>modifyJob</find>
+      <find>scheduler</find>
+      <find>startJob</find>
+      <find>setOnOff</find>
+      <find>updateStoreStatus</find>
+      <find>getStoreDetails</find>
+      <find>getStoreMemberList</find>
+      <find>getStoreMembersList</find>
+      <find>getGoodsCategoryList</find>
+      <find>PageInfo</find>
+      <find>getCsStoreGoodsHotelCategoryByStoreId</find>
+      <find>getCsStoreGoodsHotelCategoryList</find>
+      <find>innser</find>
+      <find>Invalid bound statement (not found): com.gbqd.mapper.CsMemberMapper.selectByPrimaryMemberId</find>
+      <find>selectByPrimaryMemberId</find>
+      <find>getCsStoreImageGroupDelete</find>
     </findStrings>
-    <dirStrings>
-      <dir>F:\GB_QD_CloudShop_Java\gb-qd-cloudshop-parent\gb-qd-cloudshop-mapper\src\main\java\com\gbqd\mapper</dir>
-    </dirStrings>
+    <replaceStrings>
+      <replace>Integer</replace>
+      <replace>INTEGER</replace>
+      <replace>CsStoreMember</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -66,42 +176,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/main/java/com/gbqd/service/member/redis/RedisConfig.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-common/src/main/java/com/gbqd/common/utils/RedisConfig.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/main/java/com/gbqd/service/member/GbQdCloudshopServiceMemberApplication.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-order/src/main/java/com/gbqd/service/order/GbQdCloudshopServiceOrderApplication.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-common/src/main/java/com/gbqd/common/utils/RedisUtil.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-common/src/main/java/com/gbqd/common/GbQdCloudshopCommonApplication.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/java/com/gbqd/GbQdCloudshopMapperApplication.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-pojo/src/main/java/com/gbqd/GbQdCloudshopPojoApplication.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-member-api/src/main/java/com/gbqd/GbQdCloudshopMemberApiApplication.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-member-api/src/main/java/com/gbqd/service/GbQdCloudshopMemberApiApplication.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-order-api/src/main/java/com/gbqd/service/GbQdCloudshopOrderApiApplication.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/main/java/com/gbqd/service/GbQdCloudshopServiceMemberApplication.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/java/com/gbqd/mapper/GbQdCloudshopMapperApplication.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-pojo/src/main/java/com/gbqd/pojo/GbQdCloudshopPojoApplication.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/java/com/gbqd/mapper/CsMemberMapper.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/resources/Mapper/CsMemberMapper.xml" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-front/src/main/resources/static/test.html" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-front/src/main/resources/static/home.js" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-front/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-front/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/filters/CorsConfig.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/filters/CorsFilter.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-goods/src/main/java/com/gbqd/service/goods/service/impl/CorsFilter.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-goods/src/main/java/com/gbqd/service/goods/CorsConfig.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/CorsConfig.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/CorsFilter.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/filters/AccessFilter.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/CrossInterceptor.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/Blog2MvcConfig.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-front/src/main/java/com/gbqd/service/front/CORSFilter.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/MyWebAppConfigurer.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-goods/src/main/java/com/gbqd/service/goods/controller/StoreCertificationServiceController.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-front/pom.xml" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-front/src/main/resources/templates/test.html" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-front/src/main/java/com/gbqd/service/front/GbQdCloudshopServiceFrontApplication.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-goods/src/main/java/com/gbqd/service/goods/GbQdCloudshopServiceGoodsApplication.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-order/src/main/java/com/gbqd/service/order/service/impl/CommentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-order/src/main/java/com/gbqd/service/order/service/impl/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/CORSFilter.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/ApplicationConfig.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/java/com/gbqd/mapper/CsStoreGoodsHotelCategoryMapper.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/resources/Mapper/CsStoreGoodsHotelCategoryMapper.xml" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-pojo/src/main/java/com/gbqd/pojo/goods/CsStoreGoodsHotelCategory.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-pojo/src/main/java/com/gbqd/pojo/goods/CsGoodsHotel.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/main/java/com/gbqd/service/member/controller/MemberController.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/main/java/com/gbqd/service/member/service/impl/ALiMsg.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/java/com/gbqd/mapper/CsGoodsHotelMapper.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/resources/Mapper/CsGoodsHotelMapper.xml" />
         <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/main/java/com/gbqd/service/member/service/impl/MemberServiceImpl.java" />
         <option value="$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/GbQdCloudshopZuulApplication.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/config/DocumentationConfig.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-order/src/main/java/com/gbqd/service/order/Swagger2.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-order/src/main/java/com/gbqd/service/order/controller/OrderController.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-order/src/main/resources/bootstrap.yml" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/main/java/com/gbqd/service/member/Swagger2.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/config/Swagger2.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/main/java/com/gbqd/service/member/controller/MemberController.java" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-member/pom.xml" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-api/pom.xml" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-member-api/pom.xml" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-common/pom.xml" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-pojo/pom.xml" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-mapper/pom.xml" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/main/resources/bootstrap.yml" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-eureka/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-order/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-pojo/src/main/java/com/gbqd/pojo/goods/CsGoodsHotelImage.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/java/com/gbqd/mapper/CsGoodsHotelImageMapper.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/resources/Mapper/CsGoodsHotelImageMapper.xml" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/java/com/gbqd/mapper/CsStoreImageGroupMapper.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/resources/Mapper/CsStoreImageGroupMapper.xml" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-goods/src/main/java/com/gbqd/service/goods/service/impl/StoreCertificationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/resources/mybatis-generator.xml" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-pojo/src/main/java/com/gbqd/pojo/goods/CsStoreHotelCategoryPriceSet.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-goods-api/src/main/java/com/gbqd/service/goods/GoodsService.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/java/com/gbqd/mapper/CsStoreHotelCategoryPriceSetMapper.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/resources/Mapper/CsStoreHotelCategoryPriceSetMapper.xml" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-goods/src/main/java/com/gbqd/service/goods/service/impl/GoodsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/gb-qd-cloudshop-service-goods/src/main/java/com/gbqd/service/goods/controller/GoodsController.java" />
       </list>
     </option>
   </component>
@@ -123,21 +248,31 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="gb-qd-cloudshop-service-order" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="cloudshop" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="gb-qd-cloudshop-service-order" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+          <item name="gb-qd-cloudshop-mapper" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="gb-qd-cloudshop-mapper" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="gb-qd-cloudshop-mapper" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="mybatis-generator" type="36feed69:MavenProjectsStructure$PluginNode" />
         </path>
       </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="148" />
-    <option name="y" value="16" />
-    <option name="width" value="1400" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="292" />
+    <option name="y" value="33" />
+    <option name="width" value="1772" />
     <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -146,35 +281,61 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cloudshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gb-qd-cloudshop-parent" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548143136515" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551409653003" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/gb-qd-cloudshop-service-goods/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.517872" />
-    <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\GB_QD_CloudShop_Java\gb-qd-cloudshop-parent\gb-qd-cloudshop-service-front\src\main\resources\static\js" />
+      <recent name="F:\GB_QD_CloudShop_Java\gb-qd-cloudshop-parent\gb-qd-cloudshop-service-front\src\main\resources\static\js\js" />
+      <recent name="F:\GB_QD_CloudShop_Java\gb-qd-cloudshop-parent\gb-qd-cloudshop-service-goods\src\main\resources\static\images" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.gbqd.service.order" />
-      <recent name="com.gbqd.service.member" />
-      <recent name="com.gbqd.service" />
+      <recent name="com.gbqd.service.front" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.gbqd.pojo" />
+      <recent name="com.gbqd.zuul" />
+      <recent name="com.gbqd.service.goods" />
+      <recent name="com.gbqd.service.goods.service.impl" />
+      <recent name="com.gbqd.zuul.filters" />
+      <recent name="com.gbqd.pojo.member" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\GB_QD_CloudShop_Java\gb-qd-cloudshop-parent\gb-qd-cloudshop-service-front\src\main\resources\static\js" />
+      <recent name="F:\GB_QD_CloudShop_Java\gb-qd-cloudshop-parent\gb-qd-cloudshop-service-front\src\main\resources\static" />
+      <recent name="F:\GB_QD_CloudShop_Java\gb-qd-cloudshop-parent\gb-qd-cloudshop-service-front\src\main\resources" />
+      <recent name="F:\GB_QD_CloudShop_Java\gb-qd-cloudshop-parent\gb-qd-cloudshop-service-front\src\main\resources\templates" />
+      <recent name="F:\GB_QD_CloudShop_Java\gb-qd-cloudshop-parent\gb-qd-cloudshop-pojo\src\main\java\com\gbqd\pojo\order" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -189,16 +350,55 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GbQdCloudshopServiceOrderApplication">
-    <configuration name="GbQdCloudshopCommonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="gb-qd-cloudshop-common" />
+  <component name="RunManager" selected="Application.GbQdCloudshopZuulApplication">
+    <configuration name="GbQdCloudshopServiceFrontApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.gbqd.service.front.GbQdCloudshopServiceFrontApplication" />
+      <module name="gb-qd-cloudshop-service-front" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.gbqd.common.*" />
+          <option name="PATTERN" value="com.gbqd.service.front.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.gbqd.common.GbQdCloudshopCommonApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GbQdCloudshopServiceGoodsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.gbqd.service.goods.GbQdCloudshopServiceGoodsApplication" />
+      <module name="gb-qd-cloudshop-service-goods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gbqd.service.goods.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GbQdCloudshopZuulApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.gbqd.zuul.GbQdCloudshopZuulApplication" />
+      <module name="gb-qd-cloudshop-zuul" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gbqd.zuul.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RandomCodeUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.gbqd.common.utils.RandomCodeUtil" />
+      <module name="gb-qd-cloudshop-common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gbqd.common.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -210,36 +410,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GbQdCloudshopMapperApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="gb-qd-cloudshop-mapper" />
+    <configuration name="GbQdCloudshopSecuritygApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gb-qd-cloudshop-securityg" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.gbqd.securityg.GbQdCloudshopSecuritygApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GbQdCloudshopServiceFrontApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gb-qd-cloudshop-service-front" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.gbqd.service.front.GbQdCloudshopServiceFrontApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GbQdCloudshopServiceGoodsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="gb-qd-cloudshop-service-goods" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.gbqd.mapper.*" />
+          <option name="PATTERN" value="com.gbqd.service.goods.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.gbqd.mapper.GbQdCloudshopMapperApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GbQdCloudshopMemberApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="gb-qd-cloudshop-member-api" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.gbqd.service.member.GbQdCloudshopMemberApiApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GbQdCloudshopOrderApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="gb-qd-cloudshop-order-api" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.gbqd.service.order.GbQdCloudshopOrderApiApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GbQdCloudshopPojoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="gb-qd-cloudshop-pojo" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.gbqd.pojo.GbQdCloudshopPojoApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.gbqd.service.goods.GbQdCloudshopServiceGoodsApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -265,501 +458,929 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.RandomCodeUtil" />
+      <item itemvalue="Application.GbQdCloudshopServiceGoodsApplication" />
+      <item itemvalue="Application.GbQdCloudshopServiceFrontApplication" />
+      <item itemvalue="Application.GbQdCloudshopZuulApplication" />
+      <item itemvalue="Spring Boot.GbQdCloudshopEurekaApplication" />
+      <item itemvalue="Spring Boot.GbQdCloudshopServiceMemberApplication" />
+      <item itemvalue="Spring Boot.GbQdCloudshopServiceOrderApplication" />
+      <item itemvalue="Spring Boot.GbQdCloudshopZuulApplication" />
+      <item itemvalue="Spring Boot.GbQdCloudshopSecuritygApplication" />
+      <item itemvalue="Spring Boot.GbQdCloudshopServiceFrontApplication" />
+      <item itemvalue="Spring Boot.GbQdCloudshopServiceGoodsApplication" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.GbQdCloudshopMapperApplication" />
-        <item itemvalue="Spring Boot.GbQdCloudshopCommonApplication" />
+        <item itemvalue="Application.GbQdCloudshopServiceGoodsApplication" />
+        <item itemvalue="Application.GbQdCloudshopZuulApplication" />
+        <item itemvalue="Application.GbQdCloudshopServiceFrontApplication" />
+        <item itemvalue="Spring Boot.GbQdCloudshopServiceGoodsApplication" />
+        <item itemvalue="Application.RandomCodeUtil" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="699a3432-0d72-4036-a02e-d8e1ed1d6d02" name="Default Changelist" comment="" />
-      <created>1547780851549</created>
+      <changelist id="4f34aece-d82a-4b13-a661-e682bb0dcda8" name="Default Changelist" comment="" />
+      <created>1548235212160</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1547780851549</updated>
-      <workItem from="1547780853951" duration="20365000" />
-      <workItem from="1548032538215" duration="24148000" />
-      <workItem from="1548067782206" duration="866000" />
-      <workItem from="1548118562188" duration="3688000" />
-      <workItem from="1548122273665" duration="14150000" />
+      <updated>1548235212160</updated>
+      <workItem from="1548235214723" duration="6229000" />
+      <workItem from="1548291078050" duration="27200000" />
+      <workItem from="1548324014183" duration="3710000" />
+      <workItem from="1548377438836" duration="27183000" />
+      <workItem from="1548636944925" duration="18176000" />
+      <workItem from="1548723336757" duration="28072000" />
+      <workItem from="1548809477029" duration="29001000" />
+      <workItem from="1548896730159" duration="25832000" />
+      <workItem from="1548982725055" duration="24347000" />
+      <workItem from="1549847452308" duration="22884000" />
+      <workItem from="1549932679944" duration="21545000" />
+      <workItem from="1549959610724" duration="2770000" />
+      <workItem from="1549962403269" duration="312000" />
+      <workItem from="1549962732332" duration="2909000" />
+      <workItem from="1550018842566" duration="26867000" />
+      <workItem from="1550106068722" duration="27389000" />
+      <workItem from="1550192139861" duration="313000" />
+      <workItem from="1550192732315" duration="25538000" />
+      <workItem from="1550278727947" duration="14685000" />
+      <workItem from="1550451692016" duration="14132000" />
+      <workItem from="1550537101988" duration="15002000" />
+      <workItem from="1550625333727" duration="23876000" />
+      <workItem from="1550710764691" duration="28094000" />
+      <workItem from="1550796788580" duration="23894000" />
+      <workItem from="1550882580994" duration="16614000" />
+      <workItem from="1550915173140" duration="1024000" />
+      <workItem from="1551056737863" duration="26908000" />
+      <workItem from="1551142246466" duration="14052000" />
+      <workItem from="1551161417368" duration="6575000" />
+      <workItem from="1551168129926" duration="7234000" />
+      <workItem from="1551228659082" duration="27065000" />
+      <workItem from="1551314861673" duration="10337000" />
+      <workItem from="1551331845684" duration="10049000" />
+      <workItem from="1551402053545" duration="7555000" />
     </task>
-    <task id="LOCAL-00001" summary="修改">
-      <created>1547782021504</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
+    <task id="LOCAL-00027" summary="新增电子钱包等多接口">
+      <created>1548840988897</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
       <option name="project" value="LOCAL" />
-      <updated>1547782021505</updated>
+      <updated>1548840988897</updated>
     </task>
-    <task id="LOCAL-00002" summary="新增redis功能">
-      <created>1547802751157</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
+    <task id="LOCAL-00028" summary="新增图片解析方法">
+      <created>1548928395134</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
       <option name="project" value="LOCAL" />
-      <updated>1547802751157</updated>
+      <updated>1548928395134</updated>
     </task>
-    <task id="LOCAL-00003" summary="新增redis功能">
-      <created>1547804607811</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
+    <task id="LOCAL-00029" summary="新增图片解析方法">
+      <created>1548928433975</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
       <option name="project" value="LOCAL" />
-      <updated>1547804607811</updated>
+      <updated>1548928433975</updated>
     </task>
-    <task id="LOCAL-00004" summary="新增redis功能">
-      <created>1547807060343</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
+    <task id="LOCAL-00030" summary="新增图片解析方法">
+      <created>1548928955794</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
       <option name="project" value="LOCAL" />
-      <updated>1547807060343</updated>
+      <updated>1548928955794</updated>
     </task>
-    <task id="LOCAL-00005" summary="新增redis功能">
-      <created>1548033122161</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
+    <task id="LOCAL-00031" summary="新增图片解析方法">
+      <created>1548994942258</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
       <option name="project" value="LOCAL" />
-      <updated>1548033122161</updated>
+      <updated>1548994942258</updated>
     </task>
-    <task id="LOCAL-00006" summary="新增redis功能">
-      <created>1548062500271</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
+    <task id="LOCAL-00032" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;gb-qd-cloudshop-parent/gb-qd-cloudshop-service-api/gb-qd-cloudshop-goods-api/src/main/java/com/gbqd/service/goods/CsStoreMemberService.java&#10;#&#9;gb-qd-cloudshop-parent/gb-qd-cloudshop-service-goods/src/main/java/com/gbqd/service/goods/service/impl/CsStoreMemberServiceImpl.java&#10;#&#9;gb-qd-cloudshop-parent/gb-qd-cloudshop-service-goods/src/main/resources/bootstrap.yml&#10;#&#9;gb-qd-cloudshop-parent/gb-qd-cloudshop-service-member/src/main/resources/bootstrap.yml&#10;#&#9;gb-qd-cloudshop-parent/gb-qd-cloudshop-service-order/src/main/resources/bootstrap.yml&#10;#&#9;gb-qd-cloudshop-parent/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/ApplicationConfig.java">
+      <created>1548995606663</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
       <option name="project" value="LOCAL" />
-      <updated>1548062500271</updated>
+      <updated>1548995606663</updated>
     </task>
-    <task id="LOCAL-00007" summary="新增redis功能">
-      <created>1548119078339</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
+    <task id="LOCAL-00033" summary="修改">
+      <created>1548996633875</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
       <option name="project" value="LOCAL" />
-      <updated>1548119078340</updated>
+      <updated>1548996633875</updated>
     </task>
-    <task id="LOCAL-00008" summary="新增redis功能">
-      <created>1548142678688</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
+    <task id="LOCAL-00034" summary="修改">
+      <created>1549000905602</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
       <option name="project" value="LOCAL" />
-      <updated>1548142678688</updated>
+      <updated>1549000905602</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00035" summary="修改">
+      <created>1549855160240</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1549855160240</updated>
+    </task>
+    <task id="LOCAL-00036" summary="修改">
+      <created>1549871064024</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1549871064024</updated>
+    </task>
+    <task id="LOCAL-00037" summary="修改">
+      <created>1549873288482</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1549873288482</updated>
+    </task>
+    <task id="LOCAL-00038" summary="修改">
+      <created>1549877770336</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1549877770336</updated>
+    </task>
+    <task id="LOCAL-00039" summary="添加支付模块">
+      <created>1549935020240</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1549935020241</updated>
+    </task>
+    <task id="LOCAL-00040" summary="修改用户实体类加入新字段">
+      <created>1549936008756</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1549936008756</updated>
+    </task>
+    <task id="LOCAL-00041" summary="修改">
+      <created>1549938794596</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1549938794596</updated>
+    </task>
+    <task id="LOCAL-00042" summary="新增全局捕获异常">
+      <created>1549941488421</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1549941488421</updated>
+    </task>
+    <task id="LOCAL-00043" summary="新增全局捕获异常">
+      <created>1549948350849</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1549948350849</updated>
+    </task>
+    <task id="LOCAL-00044" summary="新增全局捕获异常">
+      <created>1549948748660</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1549948748660</updated>
+    </task>
+    <task id="LOCAL-00045" summary="新增全局捕获异常">
+      <created>1549948947421</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1549948947421</updated>
+    </task>
+    <task id="LOCAL-00046" summary="新增全局捕获异常">
+      <created>1549952195109</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1549952195109</updated>
+    </task>
+    <task id="LOCAL-00047" summary="新增日期配置">
+      <created>1549954226047</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1549954226047</updated>
+    </task>
+    <task id="LOCAL-00048" summary="新增日期配置">
+      <created>1549959399054</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1549959399054</updated>
+    </task>
+    <task id="LOCAL-00049" summary="新增日期配置">
+      <created>1549959921155</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1549959921156</updated>
+    </task>
+    <task id="LOCAL-00050" summary="新增验证码功能">
+      <created>1549965050893</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1549965050894</updated>
+    </task>
+    <task id="LOCAL-00051" summary="新增测试阿里OSS">
+      <created>1550024135948</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1550024135949</updated>
+    </task>
+    <task id="LOCAL-00052" summary="新增测试阿里OSS">
+      <created>1550048580108</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1550048580109</updated>
+    </task>
+    <task id="LOCAL-00053" summary="新增测试阿里OSS">
+      <created>1550111359846</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1550111359847</updated>
+    </task>
+    <task id="LOCAL-00054" summary="新增测试阿里OSS">
+      <created>1550114298311</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1550114298311</updated>
+    </task>
+    <task id="LOCAL-00055" summary="新增测试阿里OSS">
+      <created>1550123526598</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1550123526598</updated>
+    </task>
+    <task id="LOCAL-00056" summary="新增评价列表">
+      <created>1550217498112</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1550217498113</updated>
+    </task>
+    <task id="LOCAL-00057" summary="新增评价列表">
+      <created>1550222903715</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1550222903715</updated>
+    </task>
+    <task id="LOCAL-00058" summary="新增评价列表">
+      <created>1550467412299</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1550467412299</updated>
+    </task>
+    <task id="LOCAL-00059" summary="新增securityg">
+      <created>1550482652210</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1550482652210</updated>
+    </task>
+    <task id="LOCAL-00060" summary="新增securityg">
+      <created>1550483168443</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1550483168444</updated>
+    </task>
+    <task id="LOCAL-00061" summary="新增营业时间相关接口">
+      <created>1550563182233</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1550563182234</updated>
+    </task>
+    <task id="LOCAL-00062" summary="新增营业时间相关接口">
+      <created>1550630258500</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1550630258501</updated>
+    </task>
+    <task id="LOCAL-00063" summary="新增定时器">
+      <created>1550653167084</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1550653167084</updated>
+    </task>
+    <task id="LOCAL-00064" summary="新增定时器">
+      <created>1550813217122</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1550813217122</updated>
+    </task>
+    <task id="LOCAL-00065" summary="新增定时器">
+      <created>1550888215084</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1550888215084</updated>
+    </task>
+    <task id="LOCAL-00066" summary="新关联用户名">
+      <created>1550892021474</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1550892021475</updated>
+    </task>
+    <task id="LOCAL-00067" summary="新关联用户名">
+      <created>1551072655139</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1551072655139</updated>
+    </task>
+    <task id="LOCAL-00068" summary="新关联用户名">
+      <created>1551145099822</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1551145099823</updated>
+    </task>
+    <task id="LOCAL-00069" summary="新关联用户名">
+      <created>1551161445437</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1551161445437</updated>
+    </task>
+    <task id="LOCAL-00070" summary="新增跨域功能">
+      <created>1551232545846</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1551232545846</updated>
+    </task>
+    <task id="LOCAL-00071" summary="新增跨域功能">
+      <created>1551244762451</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1551244762451</updated>
+    </task>
+    <task id="LOCAL-00072" summary="新增跨域功能">
+      <created>1551261449393</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1551261449393</updated>
+    </task>
+    <task id="LOCAL-00073" summary="新增跨域功能">
+      <created>1551331495969</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1551331495970</updated>
+    </task>
+    <task id="LOCAL-00074" summary="新增跨域功能">
+      <created>1551340810541</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1551340810542</updated>
+    </task>
+    <task id="LOCAL-00075" summary="新增多个接口">
+      <created>1551409609676</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1551409609677</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63217000" />
+    <option name="totallyTimeSpent" value="567373000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="148" y="16" width="1400" height="1000" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36492538" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4968051" visible="true" weight="0.3640725" />
+      <window_info id="Structure" order="1" sideWeight="0.50319487" side_tool="true" weight="0.3379531" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Favorites" order="6" sideWeight="0.50319487" side_tool="true" weight="0.3379531" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.3891455" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.324295" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2494577" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.36550975" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50159913" side_tool="true" weight="0.324295" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4989339" weight="0.3286334" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.329718" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49946696" visible="true" weight="0.22017354" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.35298508" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.16151386" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32995737" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32995737" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4968051" visible="true" weight="0.34168443" />
+      <window_info id="Structure" order="1" sideWeight="0.50319487" side_tool="true" weight="0.3379531" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.50319487" side_tool="true" weight="0.3379531" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.324295" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2494577" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.3286334" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4989339" weight="0.3286334" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49946696" weight="0.22017354" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.11940298" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32995737" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32995737" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="新增店铺设置接口" />
+    <MESSAGE value="新增店铺详情接口" />
+    <MESSAGE value="回滚" />
+    <MESSAGE value="修改注解" />
+    <MESSAGE value="新增店铺相册等多个接口" />
+    <MESSAGE value="新增电子钱包等多接口" />
+    <MESSAGE value="新增图片解析方法" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;gb-qd-cloudshop-parent/gb-qd-cloudshop-service-api/gb-qd-cloudshop-goods-api/src/main/java/com/gbqd/service/goods/CsStoreMemberService.java&#10;#&#9;gb-qd-cloudshop-parent/gb-qd-cloudshop-service-goods/src/main/java/com/gbqd/service/goods/service/impl/CsStoreMemberServiceImpl.java&#10;#&#9;gb-qd-cloudshop-parent/gb-qd-cloudshop-service-goods/src/main/resources/bootstrap.yml&#10;#&#9;gb-qd-cloudshop-parent/gb-qd-cloudshop-service-member/src/main/resources/bootstrap.yml&#10;#&#9;gb-qd-cloudshop-parent/gb-qd-cloudshop-service-order/src/main/resources/bootstrap.yml&#10;#&#9;gb-qd-cloudshop-parent/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/ApplicationConfig.java" />
+    <MESSAGE value="添加支付模块" />
+    <MESSAGE value="修改用户实体类加入新字段" />
     <MESSAGE value="修改" />
-    <MESSAGE value="新增redis功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增redis功能" />
+    <MESSAGE value="新增全局捕获异常" />
+    <MESSAGE value="新增日期配置" />
+    <MESSAGE value="新增验证码功能" />
+    <MESSAGE value="新增测试阿里OSS" />
+    <MESSAGE value="新增评价列表" />
+    <MESSAGE value="新增securityg" />
+    <MESSAGE value="新增营业时间相关接口" />
+    <MESSAGE value="新增定时器" />
+    <MESSAGE value="新关联用户名" />
+    <MESSAGE value="新增跨域功能" />
+    <MESSAGE value="新增多个接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增多个接口" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/test/java/com/gbqd/service/member/GbQdCloudshopServiceMemberApplicationTests.java">
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-goods/src/main/java/com/gbqd/service/goods/service/impl/CsStoreMemberServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-common/src/test/java/com/gbqd/common/GbQdCloudshopCommonApplicationTests.java" />
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-order/src/main/java/com/gbqd/service/order/hystrix/MemberServiceHystrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="-874">
+          <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-order/src/main/java/com/gbqd/service/order/service/impl/OrderServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-284">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="396">
+          <caret line="41" column="79" selection-start-line="41" selection-start-column="79" selection-end-line="41" selection-end-column="79" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-common/src/main/java/com/gbqd/common/utils/RedisConfig.java">
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/CORSFilter.java" />
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/ApplicationConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-590">
-          <caret line="69" column="29" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="29" />
+        <state relative-caret-position="460">
+          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-order/src/main/java/com/gbqd/service/order/service/impl/CommentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-71">
+          <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/java/com/gbqd/mapper/CsStoreGoodsHotelCategoryMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-goods/src/main/java/com/gbqd/service/goods/controller/CsStoreMemberController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-common/src/main/java/com/gbqd/common/utils/RandomCodeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="182" column="23" selection-start-line="182" selection-start-column="23" selection-end-line="182" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#6808#6809#0" expanded="true" />
+            <element signature="e#6893#6894#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-member-api/src/main/java/com/gbqd/GbQdCloudshopMemberApiApplication.java" />
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-common/src/main/java/com/gbqd/common/GbQdCloudshopCommonApplication.java">
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/main/java/com/gbqd/service/member/service/impl/ALiMsg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="13" column="5" selection-start-line="11" selection-start-column="3" selection-end-line="13" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1350">
+          <caret line="40" column="114" selection-start-line="40" selection-start-column="114" selection-end-line="40" selection-end-column="114" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-pojo/src/main/java/com/gbqd/pojo/BusinessTemplateRelation.java">
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/java/com/gbqd/mapper/CsGoodsHotelMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="325">
+          <caret line="37" column="61" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-pojo/src/main/java/com/gbqd/pojo/GoodsHotel.java">
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/resources/Mapper/CsGoodsHotelMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="261" column="13" lean-forward="true" selection-start-line="261" selection-start-column="13" selection-end-line="261" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-pojo/src/main/java/com/gbqd/pojo/goods/CsStoreImageGroup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-pojo/src/main/java/com/gbqd/pojo/GbQdCloudshopPojoApplication.java">
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-pojo/src/main/java/com/gbqd/pojo/goods/CsStoreGoodsHotelCategory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="478">
+          <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#5081#5082#0" expanded="true" />
+            <element signature="e#5111#5112#0" expanded="true" />
+            <element signature="e#5158#5159#0" expanded="true" />
+            <element signature="e#5196#5197#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-common/src/main/java/com/gbqd/common/utils/RedisUtil.java">
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-pojo/src/main/java/com/gbqd/pojo/member/CsMember.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="126" column="60" selection-start-line="126" selection-start-column="53" selection-end-line="126" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2901#2902#0" expanded="true" />
-            <element signature="e#2970#2971#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1985">
+          <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-order/src/main/java/com/gbqd/service/order/Swagger2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="36" column="87" lean-forward="true" selection-start-line="36" selection-start-column="87" selection-end-line="36" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-order/src/main/java/com/gbqd/service/order/controller/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="40" column="6" lean-forward="true" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/NumberFormatException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/main/java/com/gbqd/service/member/Swagger2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/GbQdCloudshopZuulApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/config/DocumentationConfig.java">
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/resources/Mapper/CsStoreGoodsHotelCategoryMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <caret line="33" column="13" selection-start-line="31" selection-start-column="7" selection-end-line="33" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/config/Swagger2.java">
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-common/src/main/java/com/gbqd/common/utils/ResultCode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-310">
-          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/resources/Mapper/GoodsHotelMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="134" column="38" selection-start-line="134" selection-start-column="38" selection-end-line="134" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-order-api/src/main/java/com/gbqd/service/order/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-order-api/src/main/java/com/gbqd/service/order/GbQdCloudshopOrderApiApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="198">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#558#559#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/main/java/com/gbqd/service/member/service/impl/MemberServiceImpl.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-615">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="408">
+          <caret line="115" column="45" selection-start-line="115" selection-start-column="43" selection-end-line="115" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-pojo/src/main/java/com/gbqd/pojo/goods/CsGoodsHotel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5164#5165#0" expanded="true" />
+            <element signature="e#5191#5192#0" expanded="true" />
+            <element signature="e#5231#5232#0" expanded="true" />
+            <element signature="e#5263#5264#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-order/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-109">
-          <caret line="75" column="23" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/java/com/gbqd/pojo/CsMember.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/java/com/gbqd/pojo/GoodsHotel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/java/com/gbqd/mapper/GbQdCloudshopMapperApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/java/com/gbqd/mapper/GoodsHotelMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/java/com/gbqd/mapper/CsMemberMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/resources/Mapper/CsMemberMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+        <state relative-caret-position="99">
+          <caret line="229" column="44" lean-forward="true" selection-start-line="229" selection-start-column="44" selection-end-line="229" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-pojo/src/main/java/com/gbqd/pojo/CsMember.java">
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/java/com/gbqd/mapper/CsMemberMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-zuul/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1386" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="25" column="14" selection-start-line="24" selection-start-column="45" selection-end-line="25" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2112">
-          <caret line="96" column="18" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-member/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2308">
-          <caret line="129" selection-start-line="129" selection-end-line="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-order-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-member-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-member-api/src/main/java/com/gbqd/service/member/MemberService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-member-api/src/main/java/com/gbqd/service/member/GbQdCloudshopMemberApiApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#407#408#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-eureka/src/main/java/com/gbqd/eureka/GbQdCloudshopEurekaApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-pojo/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-352">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/main/java/com/gbqd/service/member/GbQdCloudshopServiceMemberApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-order/src/main/java/com/gbqd/service/order/GbQdCloudshopServiceOrderApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-order/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        <state relative-caret-position="396">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/main/java/com/gbqd/service/member/controller/MemberController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="65" column="38" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="38" />
+        <state relative-caret-position="148">
+          <caret line="58" column="39" lean-forward="true" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/main/resources/bootstrap.yml">
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-member-api/src/main/java/com/gbqd/service/member/MemberService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        <state relative-caret-position="300">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/main/java/com/gbqd/service/member/service/impl/MemberServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        <state relative-caret-position="328">
+          <caret line="74" column="48" lean-forward="true" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-order/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-eureka/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-pojo/src/main/java/com/gbqd/pojo/goods/CsStore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-pojo/src/main/java/com/gbqd/pojo/goods/CsStoreImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="80" column="65" lean-forward="true" selection-start-line="80" selection-start-column="2" selection-end-line="80" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-pojo/src/main/java/com/gbqd/pojo/goods/CsGoodsHotelImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-securityg/src/main/java/com/gbqd/securityg/config/SelfFilterInvocationSecurityMetadataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-goods-api/src/main/java/com/gbqd/service/goods/StoreCertificationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3916">
+          <caret line="191" column="32" selection-start-line="191" selection-start-column="32" selection-end-line="191" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/resources/Mapper/CsGoodsHotelImageMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/resources/Mapper/CsStoreImageGroupMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-goods/src/main/java/com/gbqd/service/goods/controller/StoreCertificationServiceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="316" column="53" selection-start-line="316" selection-start-column="53" selection-end-line="316" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/java/com/gbqd/mapper/CsGoodsHotelImageMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/java/com/gbqd/mapper/CsStoreImageGroupMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="32" column="27" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-eureka/src/main/java/com/gbqd/eureka/GbQdCloudshopEurekaApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-goods/src/main/java/com/gbqd/service/goods/GbQdCloudshopServiceGoodsApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="17" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-member/src/main/java/com/gbqd/service/member/GbQdCloudshopServiceMemberApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-order/src/main/java/com/gbqd/service/order/GbQdCloudshopServiceOrderApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/resources/Mapper/CsStoreHolidaySettingsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/resources/mybatis-generator.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-pojo/src/main/java/com/gbqd/pojo/goods/CsStoreBusinessHours.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="74" column="65" lean-forward="true" selection-start-line="74" selection-start-column="2" selection-end-line="74" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-zuul/src/main/java/com/gbqd/zuul/GbQdCloudshopZuulApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-goods-api/src/main/java/com/gbqd/service/goods/StoreSetTimeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="87" column="35" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-goods/src/main/java/com/gbqd/service/goods/controller/StoreSetTimeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="151" column="47" selection-start-line="151" selection-start-column="47" selection-end-line="151" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-goods/src/main/java/com/gbqd/service/goods/service/impl/StoreCertificationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2219">
+          <caret line="553" column="13" lean-forward="true" selection-start-line="553" selection-start-column="13" selection-end-line="553" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-goods/src/main/java/com/gbqd/service/goods/service/impl/StoreSetTimeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="157" column="136" lean-forward="true" selection-start-line="157" selection-start-column="115" selection-end-line="157" selection-end-column="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-pojo/src/main/java/com/gbqd/pojo/goods/CsStoreHotelCategoryPriceSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-api/gb-qd-cloudshop-goods-api/src/main/java/com/gbqd/service/goods/GoodsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="329" column="77" selection-start-line="329" selection-start-column="77" selection-end-line="329" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/resources/Mapper/CsStoreHotelCategoryPriceSetMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-mapper/src/main/java/com/gbqd/mapper/CsStoreHotelCategoryPriceSetMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-goods/src/main/java/com/gbqd/service/goods/service/impl/GoodsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="737" column="159" lean-forward="true" selection-start-line="728" selection-start-column="2" selection-end-line="737" selection-end-column="159" />
+          <folding>
+            <element signature="e#31396#31436#0" expanded="true" />
+            <element signature="e#32012#32042#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gb-qd-cloudshop-service-goods/src/main/java/com/gbqd/service/goods/controller/GoodsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="538" column="168" lean-forward="true" selection-start-line="538" selection-start-column="168" selection-end-line="538" selection-end-column="168" />
         </state>
       </provider>
     </entry>
@@ -769,7 +1390,6 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>cloudshop:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -816,11 +1436,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>gb-qd-cloudshop-common</last-edited>
+          <last-edited>gb-qd-cloudshop-service-member</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.517872" />
+                <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -840,11 +1461,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: io.springfox:springfox-swagger-ui:2.6.1</last-edited>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.517872" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>

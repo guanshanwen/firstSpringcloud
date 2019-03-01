@@ -8,10 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="gb-qd-cloudshop-common" />
         <module name="gb-qd-cloudshop-eureka" />
+        <module name="gb-qd-cloudshop-goods-api" />
         <module name="gb-qd-cloudshop-mapper" />
         <module name="gb-qd-cloudshop-member-api" />
         <module name="gb-qd-cloudshop-order-api" />
         <module name="gb-qd-cloudshop-pojo" />
+        <module name="gb-qd-cloudshop-securityg" />
+        <module name="gb-qd-cloudshop-service-front" />
+        <module name="gb-qd-cloudshop-service-goods" />
         <module name="gb-qd-cloudshop-service-member" />
         <module name="gb-qd-cloudshop-service-order" />
         <module name="gb-qd-cloudshop-zuul" />
@@ -21,13 +25,19 @@
       <module name="cloudshop" target="1.8" />
       <module name="gb-qd-cloudshop-common" target="1.8" />
       <module name="gb-qd-cloudshop-eureka" target="1.8" />
+      <module name="gb-qd-cloudshop-goods-api" target="1.8" />
       <module name="gb-qd-cloudshop-mapper" target="1.8" />
       <module name="gb-qd-cloudshop-member-api" target="1.8" />
       <module name="gb-qd-cloudshop-order-api" target="1.8" />
       <module name="gb-qd-cloudshop-pojo" target="1.8" />
+      <module name="gb-qd-cloudshop-securityg" target="1.8" />
       <module name="gb-qd-cloudshop-service-api" target="1.8" />
+      <module name="gb-qd-cloudshop-service-front" target="1.8" />
+      <module name="gb-qd-cloudshop-service-goods" target="1.8" />
+      <module name="gb-qd-cloudshop-service-goods (1) (com.gbqd.service.goods)" target="1.8" />
       <module name="gb-qd-cloudshop-service-member" target="1.8" />
       <module name="gb-qd-cloudshop-service-order" target="1.8" />
+      <module name="gb-qd-cloudshop-service-storeGoods" target="1.8" />
       <module name="gb-qd-cloudshop-zuul" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -35,12 +45,18 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="gb-qd-cloudshop-common" options="-parameters" />
       <module name="gb-qd-cloudshop-eureka" options="-parameters" />
+      <module name="gb-qd-cloudshop-goods-api" options="-parameters" />
       <module name="gb-qd-cloudshop-mapper" options="-parameters" />
       <module name="gb-qd-cloudshop-member-api" options="-parameters" />
       <module name="gb-qd-cloudshop-order-api" options="-parameters" />
       <module name="gb-qd-cloudshop-pojo" options="-parameters" />
+      <module name="gb-qd-cloudshop-securityg" options="-parameters" />
+      <module name="gb-qd-cloudshop-service-front" options="-parameters" />
+      <module name="gb-qd-cloudshop-service-goods" options="-parameters" />
+      <module name="gb-qd-cloudshop-service-goods (1) (com.gbqd.service.goods)" options="-parameters" />
       <module name="gb-qd-cloudshop-service-member" options="-parameters" />
       <module name="gb-qd-cloudshop-service-order" options="-parameters" />
+      <module name="gb-qd-cloudshop-service-storeGoods" options="-parameters" />
       <module name="gb-qd-cloudshop-zuul" options="-parameters" />
     </option>
   </component>

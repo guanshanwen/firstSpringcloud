@@ -10,14 +10,14 @@
             <property name="suppressAllComments" value="true"/>
         </commentGenerator>
         <!--数据库链接地址账号密码-->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.0.41:3306/gb_cloudshop"
-                        userId="root" password="gbe2019">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://47.104.18.243:3306/gb_cloudshop"
+                        userId="root" password="123456">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
         <!--生成Model类存放位置-->
-        <javaModelGenerator targetPackage="com.gbqd.pojo" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.gbqd.pojo.goods" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
@@ -35,7 +35,7 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!--生成对应表及类名-->
-        <table tableName="cs_member" domainObjectName="CsMember" enableCountByExample="false"
+        <table tableName="cs_store_hotel_category_price_set" domainObjectName="CsStoreHotelCategoryPriceSet" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false"></table>
     </context>

@@ -1,0 +1,34 @@
+spring:
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #url: jdbc:mysql://192.168.0.41:3306/gb_cloudshop?serverTimezone=GMT%2B8&allowMultiQueries=true
+    #username: root
+    #password: gbe2019
+    url: jdbc:mysql://47.104.18.243:3306/gb_cloudshop?serverTimezone=GMT%2B8&allowMultiQueries=true
+    username: root
+    password: 123456
+  redis:
+    database: 0
+    host: 47.104.18.243
+#    host: 192.168.0.41
+    port: 6379
+    password: 123456
+    timeout: 0
+mybatis:
+  type-aliases-package: com.gbqd.pojo
+  mapper-locations: classpath:Mapper/*.xml
+
+# swagger2
+swagger2.package: com.gbqd.service.goods.controller
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+# 打印sql
+logging:
+  level:
+    com.gbqd.mapper: debug

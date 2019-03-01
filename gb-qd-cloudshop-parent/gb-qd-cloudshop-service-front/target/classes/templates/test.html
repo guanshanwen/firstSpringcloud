@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script src="jquery-3.3.1.min.js"></script>-->
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js" type="text/javascript" ></script>
+</head>
+<body>
+<form action="" method="get">
+    <p>First name: <input type="text" name="fname"/></p>
+    <p>Last name: <input type="text" name="lname"/></p>
+    <p>点击:
+        <button type="button" onclick="aaa()">Click Me!</button>
+    </p>
+    <div class="aaa">123</div>
+</form>
+</body>
+<script type="text/javascript" >
+
+    function aaa() {
+        $.ajax({
+            url: 'http://47.104.18.243:13000/myServerGoods/store/imageGroupList',
+            type: 'GET',
+            dataType: 'json',
+            data: {"storeId":1524262555},
+             headers:'',
+          //  withCredentials:true,
+            success: function (date) {
+                alert(date.status+"  "+date.msg)
+            }, error: function (msg) {
+            }
+        });
+
+    }
+    </script>
+
+</html>

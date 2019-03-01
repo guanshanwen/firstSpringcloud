@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gbqd.mapper.CsStoreCommentReplyMapper">
+    <resultMap id="BaseResultMap" type="com.gbqd.pojo.order.CsStoreCommentReply">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="p_id" jdbcType="BIGINT" property="pId"/>
+        <result column="comment_id" jdbcType="INTEGER" property="commentId"/>
+        <result column="member_id" jdbcType="VARCHAR" property="memberId"/>
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+        <result column="click_praise" jdbcType="INTEGER" property="clickPraise"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="reply_member_id" jdbcType="VARCHAR" property="replyMemberId"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, p_id, comment_id, member_id, content, click_praise, create_time,reply_member_id
+  </sql>
+    <select id="countNumber" parameterType="java.lang.Long" resultType="java.lang.Integer">
+   select COUNT(*) from cs_store_comment_reply
+     where comment_id = #{commentId,jdbcType=BIGINT}
+  </select>
+    <select id="getReplyList" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        SELECT
+        a.id,
+        a.p_id,
+        a.comment_id,
+        a.member_id,
+        a.content,
+        a.click_praise,
+        a.create_time,
+        a.reply_member_id,
+        b.nickname as memberName,
+        c.nickname as replyMemberName
+        FROM
+        cs_store_comment_reply a LEFT JOIN cs_member b ON a.member_id=b.member_id
+        LEFT JOIN cs_member c ON a.reply_member_id=c.member_id
+        where comment_id = #{commentId,jdbcType=BIGINT} order  by a.create_time desc
+    </select>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from cs_store_comment_reply
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from cs_store_comment_reply
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+    <insert id="insert" parameterType="com.gbqd.pojo.order.CsStoreCommentReply">
+    insert into cs_store_comment_reply (id, p_id, comment_id, 
+      member_id, content, click_praise, 
+      create_time,reply_member_id)
+    values (#{id,jdbcType=BIGINT}, #{pId,jdbcType=BIGINT}, #{commentId,jdbcType=INTEGER}, 
+      #{memberId,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, #{clickPraise,jdbcType=INTEGER},
+      #{createTime,jdbcType=TIMESTAMP},#{replyMemberId,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.gbqd.pojo.order.CsStoreCommentReply">
+        insert into cs_store_comment_reply
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="pId != null">
+                p_id,
+            </if>
+            <if test="commentId != null">
+                comment_id,
+            </if>
+            <if test="memberId != null">
+                member_id,
+            </if>
+            <if test="content != null">
+                content,
+            </if>
+            <if test="clickPraise != null">
+                click_praise,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="replyMemberId != null">
+                reply_member_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="pId != null">
+                #{pId,jdbcType=BIGINT},
+            </if>
+            <if test="commentId != null">
+                #{commentId,jdbcType=VARCHAR},
+            </if>
+            <if test="memberId != null">
+                #{memberId,jdbcType=INTEGER},
+            </if>
+            <if test="content != null">
+                #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="clickPraise != null">
+                #{clickPraise,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="replyMemberId != null">
+                #{replyMemberId,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.gbqd.pojo.order.CsStoreCommentReply">
+        update cs_store_comment_reply
+        <set>
+            <if test="pId != null">
+                p_id = #{pId,jdbcType=BIGINT},
+            </if>
+            <if test="commentId != null">
+                comment_id = #{commentId,jdbcType=INTEGER},
+            </if>
+            <if test="memberId != null">
+                member_id = #{memberId,jdbcType=VARCHAR},
+            </if>
+            <if test="content != null">
+                content = #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="clickPraise != null">
+                click_praise = #{clickPraise,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="replyMemberId != null">
+                reply_member_id = #{replyMemberId,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.gbqd.pojo.order.CsStoreCommentReply">
+    update cs_store_comment_reply
+    set p_id = #{pId,jdbcType=BIGINT},
+      comment_id = #{commentId,jdbcType=INTEGER},
+      member_id = #{memberId,jdbcType=VARCHAR},
+      content = #{content,jdbcType=VARCHAR},
+      click_praise = #{clickPraise,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+        reply_member_id  = #{replyMemberId,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

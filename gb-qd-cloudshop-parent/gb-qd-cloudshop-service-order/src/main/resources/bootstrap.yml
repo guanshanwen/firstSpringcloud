@@ -1,11 +1,10 @@
-service-url:
-  defaultZone: http://localhost:8761/eureka/
+
 server:
-  port: 8011
+  port: 8091
 spring:
   cloud:
     client:
-      ipAddress: 192.168.0.57
+      ipAddress: 127.0.0.1
   application:
     name: service-order
 eureka:
@@ -13,6 +12,9 @@ eureka:
     prefer-id: ${spring.cloud.client.ipAddress}:${server.port}
     instance-id: ${spring.cloud.client.ipAddress}:${server.port}
     prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
 #    status-page-url: http://localhost:13000/eureka//swagger-ui.html
 feign:
   hystrix:

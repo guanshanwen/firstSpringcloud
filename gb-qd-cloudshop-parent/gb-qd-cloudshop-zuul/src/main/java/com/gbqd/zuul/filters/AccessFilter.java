@@ -35,7 +35,7 @@ public class AccessFilter extends ZuulFilter {
 
 
         //需要权限校验URL
-        if ("/myServer/getMemeberService".equalsIgnoreCase(request.getRequestURI())) {
+        if ("/myServerMember/v2/api-docs".equalsIgnoreCase(request.getRequestURI())) {
             return false;
         } else if ("/apigateway/order/api/v1/order/list".equalsIgnoreCase(request.getRequestURI())) {
             return true;
@@ -58,13 +58,13 @@ public class AccessFilter extends ZuulFilter {
             ctx.setSendZuulResponse(true); //对请求进行路由
             ctx.setResponseStatusCode(200);
             ctx.set("isSuccess", true);
-            return null;
+            return ctx;
         } else {
             ctx.setSendZuulResponse(false); //不对其进行路由
             ctx.setResponseStatusCode(400);
             ctx.setResponseBody("token is empty");
             ctx.set("isSuccess", false);
-            return null;
+            return ctx;
         }
     }
 }

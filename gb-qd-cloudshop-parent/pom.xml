@@ -17,12 +17,15 @@
 
     <modules>
         <module>gb-qd-cloudshop-common</module>
+       <!-- <module>gb-qd-cloudshop-securityg</module>-->
         <module>gb-qd-cloudshop-mapper</module>
         <module>gb-qd-cloudshop-pojo</module>
         <module>gb-qd-cloudshop-service-api</module>
         <module>gb-qd-cloudshop-service-member</module>
         <module>gb-qd-cloudshop-service-order</module>
+        <module>gb-qd-cloudshop-service-goods</module>
         <module>gb-qd-cloudshop-zuul</module>
+        <module>gb-qd-cloudshop-service-front</module>
     </modules>
 
     <properties>
