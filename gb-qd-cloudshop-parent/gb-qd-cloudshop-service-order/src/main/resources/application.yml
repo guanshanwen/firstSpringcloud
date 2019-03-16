@@ -2,13 +2,13 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://47.104.18.243:3306/gb_cloudshop?serverTimezone=GMT%2B8
+    url: jdbc:mysql://*****8:3306/gb_cloudshop?serverTimezone=GMT%2B8
     username: root
     password: 123456
 #    password: gbe2019
   redis:
       database: 0
-      host:  47.104.18.243
+      host:  ******
       port: 6379
       password: 123456
       timeout: 0
